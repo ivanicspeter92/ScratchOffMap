@@ -137,8 +137,10 @@
 		E51E62291DF61100004621B7 /* ScratchOffMap */ = {
 			isa = PBXGroup;
 			children = (
+				E5F4F2A61DF61A2B00B23C83 /* Controllers */,
+				E5F4F2A41DF61A1B00B23C83 /* Models */,
+				E5F4F2A51DF61A2600B23C83 /* Views */,
 				E51E622A1DF61101004621B7 /* AppDelegate.swift */,
-				E51E622C1DF61101004621B7 /* ViewController.swift */,
 				E51E622E1DF61101004621B7 /* Main.storyboard */,
 				E51E62311DF61101004621B7 /* Assets.xcassets */,
 				E51E62331DF61101004621B7 /* LaunchScreen.storyboard */,
@@ -163,6 +165,28 @@
 				E51E624C1DF61101004621B7 /* Info.plist */,
 			);
 			path = ScratchOffMapUITests;
+			sourceTree = "<group>";
+		};
+		E5F4F2A41DF61A1B00B23C83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E5F4F2A51DF61A2600B23C83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E51E622C1DF61101004621B7 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E5F4F2A61DF61A2B00B23C83 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
