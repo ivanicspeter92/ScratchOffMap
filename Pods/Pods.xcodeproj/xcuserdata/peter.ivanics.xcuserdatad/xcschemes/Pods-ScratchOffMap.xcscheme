@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BDCA16A6F525E4789735C94A2A671643'
+               BlueprintIdentifier = '6D1DD0B8546B5378597BF24F1B92EC0A'
                BlueprintName = 'Pods-ScratchOffMap'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-ScratchOffMap.framework'>
