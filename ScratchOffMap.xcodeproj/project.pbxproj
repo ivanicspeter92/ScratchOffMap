@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84BFEDEFB39542A5F57583D3 /* Pods_ScratchOffMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0B0D89E648C196E1B94E1D /* Pods_ScratchOffMap.framework */; };
+		BB4FB9021969592A190DB876 /* Pods_ScratchOffMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9020693E979B9B6042728C4E /* Pods_ScratchOffMapTests.framework */; };
+		D3F0F953B7862A5D8597F020 /* Pods_ScratchOffMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD7DA815561A5183BDD88FC /* Pods_ScratchOffMapUITests.framework */; };
 		E51E622B1DF61101004621B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E622A1DF61101004621B7 /* AppDelegate.swift */; };
 		E51E622D1DF61101004621B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E622C1DF61101004621B7 /* ViewController.swift */; };
 		E51E62301DF61101004621B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51E622E1DF61101004621B7 /* Main.storyboard */; };
@@ -34,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04DA3F0BB226CB5EC1D84CA2 /* Pods-ScratchOffMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchOffMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchOffMapTests/Pods-ScratchOffMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		162CF9FBC8DE2BDA56F6C23E /* Pods-ScratchOffMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchOffMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchOffMap/Pods-ScratchOffMap.release.xcconfig"; sourceTree = "<group>"; };
+		3E0B0D89E648C196E1B94E1D /* Pods_ScratchOffMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScratchOffMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51C7B7E55274487AC47D5259 /* Pods-ScratchOffMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchOffMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchOffMap/Pods-ScratchOffMap.debug.xcconfig"; sourceTree = "<group>"; };
+		7AD7DA815561A5183BDD88FC /* Pods_ScratchOffMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScratchOffMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E0F5606ABD622F75AB5DA3D /* Pods-ScratchOffMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchOffMapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchOffMapUITests/Pods-ScratchOffMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9020693E979B9B6042728C4E /* Pods_ScratchOffMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScratchOffMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		943F40682EF713C443CCF012 /* Pods-ScratchOffMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchOffMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchOffMapTests/Pods-ScratchOffMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		E4211A5F87470FBD9533C6D9 /* Pods-ScratchOffMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchOffMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchOffMapUITests/Pods-ScratchOffMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E51E62271DF61100004621B7 /* ScratchOffMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchOffMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51E622A1DF61101004621B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E51E622C1DF61101004621B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BFEDEFB39542A5F57583D3 /* Pods_ScratchOffMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB4FB9021969592A190DB876 /* Pods_ScratchOffMapTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F0F953B7862A5D8597F020 /* Pods_ScratchOffMapUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22F2A62207A0FEA36F5A6BE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51C7B7E55274487AC47D5259 /* Pods-ScratchOffMap.debug.xcconfig */,
+				162CF9FBC8DE2BDA56F6C23E /* Pods-ScratchOffMap.release.xcconfig */,
+				04DA3F0BB226CB5EC1D84CA2 /* Pods-ScratchOffMapTests.debug.xcconfig */,
+				943F40682EF713C443CCF012 /* Pods-ScratchOffMapTests.release.xcconfig */,
+				7E0F5606ABD622F75AB5DA3D /* Pods-ScratchOffMapUITests.debug.xcconfig */,
+				E4211A5F87470FBD9533C6D9 /* Pods-ScratchOffMapUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		93127C15DA795DC36A947431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0D89E648C196E1B94E1D /* Pods_ScratchOffMap.framework */,
+				9020693E979B9B6042728C4E /* Pods_ScratchOffMapTests.framework */,
+				7AD7DA815561A5183BDD88FC /* Pods_ScratchOffMapUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E51E621E1DF61100004621B7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				E51E623E1DF61101004621B7 /* ScratchOffMapTests */,
 				E51E62491DF61101004621B7 /* ScratchOffMapUITests */,
 				E51E62281DF61100004621B7 /* Products */,
+				22F2A62207A0FEA36F5A6BE6 /* Pods */,
+				93127C15DA795DC36A947431 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E51E624F1DF61101004621B7 /* Build configuration list for PBXNativeTarget "ScratchOffMap" */;
 			buildPhases = (
+				4FA19460ECC0B0066DB0229E /* [CP] Check Pods Manifest.lock */,
 				E51E62231DF61100004621B7 /* Sources */,
 				E51E62241DF61100004621B7 /* Frameworks */,
 				E51E62251DF61100004621B7 /* Resources */,
+				5AF21F2ED62EB7A8813E1A15 /* [CP] Embed Pods Frameworks */,
+				2F14F005D241BAD9A9E598B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E51E62521DF61101004621B7 /* Build configuration list for PBXNativeTarget "ScratchOffMapTests" */;
 			buildPhases = (
+				063E9FA8C7BACBED8BA417FE /* [CP] Check Pods Manifest.lock */,
 				E51E62371DF61101004621B7 /* Sources */,
 				E51E62381DF61101004621B7 /* Frameworks */,
 				E51E62391DF61101004621B7 /* Resources */,
+				87BFF2BE720477B09ADD7017 /* [CP] Embed Pods Frameworks */,
+				AFAB1AE234DA8EF366DF1C05 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E51E62551DF61101004621B7 /* Build configuration list for PBXNativeTarget "ScratchOffMapUITests" */;
 			buildPhases = (
+				1D5E242E032D59AFDF5A4F14 /* [CP] Check Pods Manifest.lock */,
 				E51E62421DF61101004621B7 /* Sources */,
 				E51E62431DF61101004621B7 /* Frameworks */,
 				E51E62441DF61101004621B7 /* Resources */,
+				E7AB10D5353221169B7FE746 /* [CP] Embed Pods Frameworks */,
+				34A83E9C58C8ECC2541E2C30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		063E9FA8C7BACBED8BA417FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1D5E242E032D59AFDF5A4F14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2F14F005D241BAD9A9E598B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScratchOffMap/Pods-ScratchOffMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34A83E9C58C8ECC2541E2C30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScratchOffMapUITests/Pods-ScratchOffMapUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FA19460ECC0B0066DB0229E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5AF21F2ED62EB7A8813E1A15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScratchOffMap/Pods-ScratchOffMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87BFF2BE720477B09ADD7017 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScratchOffMapTests/Pods-ScratchOffMapTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFAB1AE234DA8EF366DF1C05 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScratchOffMapTests/Pods-ScratchOffMapTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7AB10D5353221169B7FE746 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScratchOffMapUITests/Pods-ScratchOffMapUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E51E62231DF61100004621B7 /* Sources */ = {
@@ -413,6 +600,7 @@
 		};
 		E51E62501DF61101004621B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C7B7E55274487AC47D5259 /* Pods-ScratchOffMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K54WTJYP39;
@@ -426,6 +614,7 @@
 		};
 		E51E62511DF61101004621B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 162CF9FBC8DE2BDA56F6C23E /* Pods-ScratchOffMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K54WTJYP39;
@@ -439,6 +628,7 @@
 		};
 		E51E62531DF61101004621B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04DA3F0BB226CB5EC1D84CA2 /* Pods-ScratchOffMapTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +644,7 @@
 		};
 		E51E62541DF61101004621B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943F40682EF713C443CCF012 /* Pods-ScratchOffMapTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +660,7 @@
 		};
 		E51E62561DF61101004621B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E0F5606ABD622F75AB5DA3D /* Pods-ScratchOffMapUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = K54WTJYP39;
@@ -483,6 +675,7 @@
 		};
 		E51E62571DF61101004621B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4211A5F87470FBD9533C6D9 /* Pods-ScratchOffMapUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = K54WTJYP39;
