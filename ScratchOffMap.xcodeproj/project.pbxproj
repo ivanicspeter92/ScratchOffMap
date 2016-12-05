@@ -707,6 +707,7 @@
 				E51E62511DF61101004621B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E51E62521DF61101004621B7 /* Build configuration list for PBXNativeTarget "ScratchOffMapTests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +716,7 @@
 				E51E62541DF61101004621B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E51E62551DF61101004621B7 /* Build configuration list for PBXNativeTarget "ScratchOffMapUITests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +725,7 @@
 				E51E62571DF61101004621B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
