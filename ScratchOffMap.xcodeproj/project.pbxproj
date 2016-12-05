@@ -140,10 +140,8 @@
 				E5F4F2A61DF61A2B00B23C83 /* Controllers */,
 				E5F4F2A41DF61A1B00B23C83 /* Models */,
 				E5F4F2A51DF61A2600B23C83 /* Views */,
-				E51E622A1DF61101004621B7 /* AppDelegate.swift */,
-				E51E622E1DF61101004621B7 /* Main.storyboard */,
+				E5F4F2A71DF61A7E00B23C83 /* Storyboards */,
 				E51E62311DF61101004621B7 /* Assets.xcassets */,
-				E51E62331DF61101004621B7 /* LaunchScreen.storyboard */,
 				E51E62361DF61101004621B7 /* Info.plist */,
 			);
 			path = ScratchOffMap;
@@ -170,6 +168,7 @@
 		E5F4F2A41DF61A1B00B23C83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E51E622A1DF61101004621B7 /* AppDelegate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +186,15 @@
 			children = (
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E5F4F2A71DF61A7E00B23C83 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E51E622E1DF61101004621B7 /* Main.storyboard */,
+				E51E62331DF61101004621B7 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
