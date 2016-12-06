@@ -17,6 +17,8 @@
 		E51E62351DF61101004621B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51E62331DF61101004621B7 /* LaunchScreen.storyboard */; };
 		E51E62401DF61101004621B7 /* ScratchOffMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E623F1DF61101004621B7 /* ScratchOffMapTests.swift */; };
 		E51E624B1DF61101004621B7 /* ScratchOffMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E624A1DF61101004621B7 /* ScratchOffMapUITests.swift */; };
+		E556D0101DF75DAC00575730 /* String+EmojiFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E556D00F1DF75DAC00575730 /* String+EmojiFlag.swift */; };
+		E556D0141DF761ED00575730 /* String+EmojiFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */; };
 		E5F4F2A91DF61DC200B23C83 /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = E5F4F2A81DF61DC200B23C83 /* Countries.json */; };
 		E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4F2AA1DF61E2D00B23C83 /* Country.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		E51E62461DF61101004621B7 /* ScratchOffMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScratchOffMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51E624A1DF61101004621B7 /* ScratchOffMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchOffMapUITests.swift; sourceTree = "<group>"; };
 		E51E624C1DF61101004621B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E556D00F1DF75DAC00575730 /* String+EmojiFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EmojiFlag.swift"; sourceTree = "<group>"; };
+		E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EmojiFlagTests.swift"; sourceTree = "<group>"; };
 		E5F4F2A81DF61DC200B23C83 /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
 		E5F4F2AA1DF61E2D00B23C83 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +160,7 @@
 			children = (
 				E51E623F1DF61101004621B7 /* ScratchOffMapTests.swift */,
 				E51E62411DF61101004621B7 /* Info.plist */,
+				E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */,
 			);
 			path = ScratchOffMapTests;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				E51E622A1DF61101004621B7 /* AppDelegate.swift */,
 				E5F4F2A81DF61DC200B23C83 /* Countries.json */,
 				E5F4F2AA1DF61E2D00B23C83 /* Country.swift */,
+				E556D00F1DF75DAC00575730 /* String+EmojiFlag.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 				E51E622D1DF61101004621B7 /* ViewController.swift in Sources */,
 				E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */,
 				E51E622B1DF61101004621B7 /* AppDelegate.swift in Sources */,
+				E556D0101DF75DAC00575730 /* String+EmojiFlag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E51E62401DF61101004621B7 /* ScratchOffMapTests.swift in Sources */,
+				E556D0141DF761ED00575730 /* String+EmojiFlagTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
