@@ -17,6 +17,8 @@
 		E51E62351DF61101004621B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51E62331DF61101004621B7 /* LaunchScreen.storyboard */; };
 		E51E62401DF61101004621B7 /* ScratchOffMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E623F1DF61101004621B7 /* ScratchOffMapTests.swift */; };
 		E51E624B1DF61101004621B7 /* ScratchOffMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E624A1DF61101004621B7 /* ScratchOffMapUITests.swift */; };
+		E5F4F2A91DF61DC200B23C83 /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = E5F4F2A81DF61DC200B23C83 /* Countries.json */; };
+		E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4F2AA1DF61E2D00B23C83 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		E51E62461DF61101004621B7 /* ScratchOffMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScratchOffMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51E624A1DF61101004621B7 /* ScratchOffMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchOffMapUITests.swift; sourceTree = "<group>"; };
 		E51E624C1DF61101004621B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5F4F2A81DF61DC200B23C83 /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
+		E5F4F2AA1DF61E2D00B23C83 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				E51E622A1DF61101004621B7 /* AppDelegate.swift */,
+				E5F4F2A81DF61DC200B23C83 /* Countries.json */,
+				E5F4F2AA1DF61E2D00B23C83 /* Country.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 			files = (
 				E51E62351DF61101004621B7 /* LaunchScreen.storyboard in Resources */,
 				E51E62321DF61101004621B7 /* Assets.xcassets in Resources */,
+				E5F4F2A91DF61DC200B23C83 /* Countries.json in Resources */,
 				E51E62301DF61101004621B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E51E622D1DF61101004621B7 /* ViewController.swift in Sources */,
+				E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */,
 				E51E622B1DF61101004621B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
