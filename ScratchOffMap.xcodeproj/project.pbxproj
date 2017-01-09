@@ -11,7 +11,6 @@
 		BB4FB9021969592A190DB876 /* Pods_ScratchOffMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9020693E979B9B6042728C4E /* Pods_ScratchOffMapTests.framework */; };
 		D3F0F953B7862A5D8597F020 /* Pods_ScratchOffMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD7DA815561A5183BDD88FC /* Pods_ScratchOffMapUITests.framework */; };
 		E51E622B1DF61101004621B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E622A1DF61101004621B7 /* AppDelegate.swift */; };
-		E51E622D1DF61101004621B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E622C1DF61101004621B7 /* ViewController.swift */; };
 		E51E62301DF61101004621B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51E622E1DF61101004621B7 /* Main.storyboard */; };
 		E51E62321DF61101004621B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51E62311DF61101004621B7 /* Assets.xcassets */; };
 		E51E62351DF61101004621B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51E62331DF61101004621B7 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,11 @@
 		E556D0141DF761ED00575730 /* String+EmojiFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */; };
 		E5C1A6E41E24084300E934D8 /* Coodrinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6E31E24084300E934D8 /* Coodrinates.swift */; };
 		E5C1A6E71E24087F00E934D8 /* String+ToDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */; };
+		E5C1A6E91E240A2900E934D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C1A6E81E240A2900E934D8 /* MapKit.framework */; };
+		E5C1A6EB1E240A8000E934D8 /* WorldMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6EA1E240A8000E934D8 /* WorldMapViewController.swift */; };
+		E5C1A6ED1E240AD600E934D8 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6EC1E240AD600E934D8 /* SettingsTableViewController.swift */; };
+		E5C1A6F01E240DC000E934D8 /* DutyCycling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6EF1E240DC000E934D8 /* DutyCycling.swift */; };
+		E5C1A6F21E24127E00E934D8 /* DutyCyclingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6F11E24127E00E934D8 /* DutyCyclingTests.swift */; };
 		E5F4F2A91DF61DC200B23C83 /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = E5F4F2A81DF61DC200B23C83 /* Countries.json */; };
 		E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4F2AA1DF61E2D00B23C83 /* Country.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +58,6 @@
 		E4211A5F87470FBD9533C6D9 /* Pods-ScratchOffMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchOffMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchOffMapUITests/Pods-ScratchOffMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E51E62271DF61100004621B7 /* ScratchOffMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchOffMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51E622A1DF61101004621B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E51E622C1DF61101004621B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E51E622F1DF61101004621B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E51E62311DF61101004621B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E51E62341DF61101004621B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +72,11 @@
 		E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EmojiFlagTests.swift"; sourceTree = "<group>"; };
 		E5C1A6E31E24084300E934D8 /* Coodrinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coodrinates.swift; sourceTree = "<group>"; };
 		E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ToDouble.swift"; sourceTree = "<group>"; };
+		E5C1A6E81E240A2900E934D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E5C1A6EA1E240A8000E934D8 /* WorldMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldMapViewController.swift; sourceTree = "<group>"; };
+		E5C1A6EC1E240AD600E934D8 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		E5C1A6EF1E240DC000E934D8 /* DutyCycling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DutyCycling.swift; sourceTree = "<group>"; };
+		E5C1A6F11E24127E00E934D8 /* DutyCyclingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DutyCyclingTests.swift; sourceTree = "<group>"; };
 		E5F4F2A81DF61DC200B23C83 /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
 		E5F4F2AA1DF61E2D00B23C83 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C1A6E91E240A2900E934D8 /* MapKit.framework in Frameworks */,
 				84BFEDEFB39542A5F57583D3 /* Pods_ScratchOffMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +126,7 @@
 		93127C15DA795DC36A947431 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5C1A6E81E240A2900E934D8 /* MapKit.framework */,
 				3E0B0D89E648C196E1B94E1D /* Pods_ScratchOffMap.framework */,
 				9020693E979B9B6042728C4E /* Pods_ScratchOffMapTests.framework */,
 				7AD7DA815561A5183BDD88FC /* Pods_ScratchOffMapUITests.framework */,
@@ -165,6 +175,7 @@
 				E51E623F1DF61101004621B7 /* ScratchOffMapTests.swift */,
 				E51E62411DF61101004621B7 /* Info.plist */,
 				E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */,
+				E5C1A6F11E24127E00E934D8 /* DutyCyclingTests.swift */,
 			);
 			path = ScratchOffMapTests;
 			sourceTree = "<group>";
@@ -186,9 +197,18 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E5C1A6EE1E240D9C00E934D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E5C1A6EF1E240DC000E934D8 /* DutyCycling.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E5F4F2A41DF61A1B00B23C83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E5C1A6EE1E240D9C00E934D8 /* Services */,
 				E5C1A6E51E24087100E934D8 /* Extensions */,
 				E5C1A6E31E24084300E934D8 /* Coodrinates.swift */,
 				E51E622A1DF61101004621B7 /* AppDelegate.swift */,
@@ -202,7 +222,8 @@
 		E5F4F2A51DF61A2600B23C83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E51E622C1DF61101004621B7 /* ViewController.swift */,
+				E5C1A6EA1E240A8000E934D8 /* WorldMapViewController.swift */,
+				E5C1A6EC1E240AD600E934D8 /* SettingsTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -509,11 +530,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C1A6E41E24084300E934D8 /* Coodrinates.swift in Sources */,
-				E51E622D1DF61101004621B7 /* ViewController.swift in Sources */,
 				E5C1A6E71E24087F00E934D8 /* String+ToDouble.swift in Sources */,
 				E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */,
+				E5C1A6F01E240DC000E934D8 /* DutyCycling.swift in Sources */,
 				E51E622B1DF61101004621B7 /* AppDelegate.swift in Sources */,
+				E5C1A6EB1E240A8000E934D8 /* WorldMapViewController.swift in Sources */,
 				E556D0101DF75DAC00575730 /* String+EmojiFlag.swift in Sources */,
+				E5C1A6ED1E240AD600E934D8 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +546,7 @@
 			files = (
 				E51E62401DF61101004621B7 /* ScratchOffMapTests.swift in Sources */,
 				E556D0141DF761ED00575730 /* String+EmojiFlagTests.swift in Sources */,
+				E5C1A6F21E24127E00E934D8 /* DutyCyclingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
