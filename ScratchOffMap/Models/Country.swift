@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Country {
+public struct Country {
     let name: String
     let code: String
 }
