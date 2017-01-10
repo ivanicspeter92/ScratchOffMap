@@ -9,6 +9,18 @@
 import UIKit
 
 public struct Country {
+    // MARK: - Variables
     let name: String
-    let code: String
+    let code: String?
+    
+    // MARK: - Initializers
+    init?(name: String) {
+        self.name = name
+        self.code = NSLocale.localeCode(forCountry: name)
+    }
+    
+    init(name: String, code: String? = nil) {
+        self.name = name
+        self.code = code
+    }
 }

@@ -34,7 +34,7 @@ class GeoCoder {
                     
                     print(placeMark)
                     if let country = placeMark.addressDictionary?["Country"] as? String {
-                        completion(Country(name: country, code: "FI"))
+                        completion(Country(name: country))
                     } else {
                         completion(nil)
                     }
