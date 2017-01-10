@@ -14,19 +14,18 @@ enum DutyCyclingException: Error {
 
 class DutyCycling: NSObject {
     // MARK: - Variables
-    let serviceName: String
+    private var serviceName: String?
     private(set) var lastExecution: Date
     private var intervalInSeconds: Double
     private var timer: Timer!
     private var running = false
     
     // MARK: - Initializers
-    init?(serviceName: String, seconds: Double) throws {
+    init?(seconds: Double) throws {
         if seconds <= 0 {
             throw DutyCyclingException.incorrectInterval
         }
         
-        self.serviceName = serviceName
         self.lastExecution = Date(timeIntervalSince1970: TimeInterval())
         self.intervalInSeconds = seconds
         
@@ -35,16 +34,21 @@ class DutyCycling: NSObject {
         setTimer(intervalInSeconds: intervalInSeconds)
     }
     
-    convenience init?(serviceName: String, minutes: Double) throws {
-        try self.init(serviceName: serviceName, seconds: minutes * 60)
+    convenience init?(seconds: Double, serviceName: String? = nil) throws {
+        try self.init(seconds: seconds)
+        self.serviceName = serviceName
     }
     
-    convenience init?(serviceName: String, hours: Double) throws {
-        try self.init(serviceName: serviceName, minutes: hours * 60)
+    convenience init?(minutes: Double, serviceName: String? = nil) throws {
+        try self.init(seconds: minutes * 60, serviceName: serviceName)
     }
     
-    convenience init?(serviceName: String, days: Double) throws {
-        try self.init(serviceName: serviceName, hours: days * 24)
+    convenience init?(hours: Double, serviceName: String? = nil) throws {
+        try self.init(minutes: hours * 60, serviceName: serviceName)
+    }
+    
+    convenience init?(days: Double, serviceName: String? = nil) throws {
+        try self.init(hours: days * 24, serviceName: serviceName)
     }
 
     // MARK - Methods

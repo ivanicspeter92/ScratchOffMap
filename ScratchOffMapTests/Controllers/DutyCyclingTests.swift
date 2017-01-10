@@ -15,7 +15,7 @@ class DutyCyclingTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        try! self.dutyCycling = DutyCycling(serviceName: "DutyCylcing", seconds: 60)
+        try! self.dutyCycling = DutyCycling(seconds: 60)
     }
     
     override func tearDown() {
@@ -26,17 +26,17 @@ class DutyCyclingTests: XCTestCase {
     
     func testInitializingWithZeroOrNegativeSecondsThrowsIncorrectIntervalException() {
         do {
-            try self.dutyCycling = DutyCycling(serviceName: "DutyCylcing", seconds: 0)
-            try self.dutyCycling = DutyCycling(serviceName: "DutyCylcing", seconds: -5)
+            try self.dutyCycling = DutyCycling(seconds: 0)
+            try self.dutyCycling = DutyCycling(seconds: -5)
             
-            try self.dutyCycling = DutyCycling(serviceName: "DutyCylcing", minutes: 0)
-            try self.dutyCycling = DutyCycling(serviceName: "DutyCylcing", minutes: -5)
+            try self.dutyCycling = DutyCycling(minutes: 0)
+            try self.dutyCycling = DutyCycling(minutes: -5)
             
-            try self.dutyCycling = DutyCycling(serviceName: "DutyCylcing", hours: 0)
-            try self.dutyCycling = DutyCycling(serviceName: "DutyCylcing", hours: -5)
+            try self.dutyCycling = DutyCycling(hours: 0)
+            try self.dutyCycling = DutyCycling(hours: -5)
             
-            try self.dutyCycling = DutyCycling(serviceName: "DutyCylcing", days: 0)
-            try self.dutyCycling = DutyCycling(serviceName: "DutyCylcing", days: -5)
+            try self.dutyCycling = DutyCycling(days: 0)
+            try self.dutyCycling = DutyCycling(days: -5)
             
             XCTFail("The cycle should be greater than 0 seconds!")
         } catch DutyCyclingException.incorrectInterval {
