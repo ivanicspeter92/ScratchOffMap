@@ -11,11 +11,19 @@ import XCTest
 
 class GeoCodingTests: XCTestCase {
     func testKumpulaNeighbourhood() {
+        let asyncExpectation = expectation(description: "longRunningFunction")
+
         let kumpula = Coordinates(latitude: 60.208445, longitude: 24.966967)
         
         GeoCoder.decodeCountry(ofPoint: kumpula, completion: { (country) in
             XCTAssertEqual("Finland", country?.name)
             XCTAssertEqual("FI", country?.code)
+            
+            asyncExpectation.fulfill()
         })
+        
+        self.waitForExpectations(timeout: 5) { (error) in
+            XCTAssertNil(error, "Something went horribly wrong")
+        }
     }
 }
