@@ -15,7 +15,7 @@ enum DutyCyclingException: Error {
 class DutyCycling: NSObject {
     // MARK: - Variables
     let serviceName: String
-    private var lastExecution: Date
+    private(set) var lastExecution: Date
     private var intervalInSeconds: Double
     private var timer: Timer!
     private var running = false
@@ -65,6 +65,7 @@ class DutyCycling: NSObject {
      - Date: 09.01.2017.
      */
     func execute() {
+        self.lastExecution = Date(timeIntervalSinceNow: 0)
     }
     
     func stop() {
