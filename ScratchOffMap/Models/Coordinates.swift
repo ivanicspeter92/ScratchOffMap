@@ -11,9 +11,9 @@ public struct Coordinates {
     }
     
     //MARK: - Initializers
-    public init(longitude: Double, latitute: Double, altitude: Double? = nil) {
+    public init(latitude: Double, longitude: Double, altitude: Double? = nil) {
+        self.latitude = latitude
         self.longitude = longitude
-        self.latitude = latitute
         self.altitude = altitude
     }
     
@@ -23,12 +23,12 @@ public struct Coordinates {
         switch coordinatesArray.count {
         case 3:
             if let longitude = coordinatesArray[0].toDouble(), let latitude = coordinatesArray[1].toDouble(), let altitude = coordinatesArray[2].toDouble() {
-                self.init(longitude: longitude, latitute: latitude, altitude: altitude)
+                self.init(latitude: latitude, longitude: longitude, altitude: altitude)
                 return
             }
         case 2:
             if let longitude = coordinatesArray[0].toDouble(), let latitude = coordinatesArray[1].toDouble() {
-                self.init(longitude: longitude, latitute: latitude)
+                self.init(latitude: latitude, longitude: longitude)
                 return
             }
         default:

@@ -18,6 +18,10 @@
 		E556D0101DF75DAC00575730 /* String+EmojiFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E556D00F1DF75DAC00575730 /* String+EmojiFlag.swift */; };
 		E556D0141DF761ED00575730 /* String+EmojiFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */; };
 		E5917E891E24BAFD008CA8D4 /* DutyCycling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E881E24BAFD008CA8D4 /* DutyCycling.swift */; };
+		E5917E8E1E24BEEF008CA8D4 /* GeoCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E8D1E24BEEF008CA8D4 /* GeoCoder.swift */; };
+		E5917E901E24BEFF008CA8D4 /* GeoCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E8F1E24BEFF008CA8D4 /* GeoCoderTests.swift */; };
+		E5917E931E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E921E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift */; };
+		E5917E951E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E941E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift */; };
 		E5C1A6E41E24084300E934D8 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6E31E24084300E934D8 /* Coordinates.swift */; };
 		E5C1A6E71E24087F00E934D8 /* String+ToDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */; };
 		E5C1A6E91E240A2900E934D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C1A6E81E240A2900E934D8 /* MapKit.framework */; };
@@ -69,6 +73,10 @@
 		E556D00F1DF75DAC00575730 /* String+EmojiFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EmojiFlag.swift"; sourceTree = "<group>"; };
 		E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EmojiFlagTests.swift"; sourceTree = "<group>"; };
 		E5917E881E24BAFD008CA8D4 /* DutyCycling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DutyCycling.swift; sourceTree = "<group>"; };
+		E5917E8D1E24BEEF008CA8D4 /* GeoCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCoder.swift; sourceTree = "<group>"; };
+		E5917E8F1E24BEFF008CA8D4 /* GeoCoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCoderTests.swift; sourceTree = "<group>"; };
+		E5917E921E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+LocaleCodeForCountry.swift"; sourceTree = "<group>"; };
+		E5917E941E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+LocaleCodeForCountryTests.swift"; sourceTree = "<group>"; };
 		E5C1A6E31E24084300E934D8 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ToDouble.swift"; sourceTree = "<group>"; };
 		E5C1A6E81E240A2900E934D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -192,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				E5C1A6F11E24127E00E934D8 /* DutyCyclingTests.swift */,
+				E5917E8F1E24BEFF008CA8D4 /* GeoCoderTests.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */,
+				E5917E941E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +226,7 @@
 			children = (
 				E556D00F1DF75DAC00575730 /* String+EmojiFlag.swift */,
 				E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */,
+				E5917E921E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				E5917E881E24BAFD008CA8D4 /* DutyCycling.swift */,
+				E5917E8D1E24BEEF008CA8D4 /* GeoCoder.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -546,9 +558,11 @@
 				E5C1A6E71E24087F00E934D8 /* String+ToDouble.swift in Sources */,
 				E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */,
 				E5917E891E24BAFD008CA8D4 /* DutyCycling.swift in Sources */,
+				E5917E8E1E24BEEF008CA8D4 /* GeoCoder.swift in Sources */,
 				E51E622B1DF61101004621B7 /* AppDelegate.swift in Sources */,
 				E5C1A6EB1E240A8000E934D8 /* WorldMapViewController.swift in Sources */,
 				E556D0101DF75DAC00575730 /* String+EmojiFlag.swift in Sources */,
+				E5917E931E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift in Sources */,
 				E5C1A6ED1E240AD600E934D8 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,7 +571,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5917E901E24BEFF008CA8D4 /* GeoCoderTests.swift in Sources */,
 				E556D0141DF761ED00575730 /* String+EmojiFlagTests.swift in Sources */,
+				E5917E951E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift in Sources */,
 				E5C1A6F21E24127E00E934D8 /* DutyCyclingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
