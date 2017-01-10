@@ -235,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				E5C1A6E31E24084300E934D8 /* Coordinates.swift */,
-				E51E622A1DF61101004621B7 /* AppDelegate.swift */,
 				E5F4F2A81DF61DC200B23C83 /* Countries.json */,
 				E5F4F2AA1DF61E2D00B23C83 /* Country.swift */,
 			);
@@ -254,6 +253,7 @@
 		E5F4F2A61DF61A2B00B23C83 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E51E622A1DF61101004621B7 /* AppDelegate.swift */,
 				E5917E881E24BAFD008CA8D4 /* DutyCycling.swift */,
 				E5917E8D1E24BEEF008CA8D4 /* GeoCoder.swift */,
 			);
