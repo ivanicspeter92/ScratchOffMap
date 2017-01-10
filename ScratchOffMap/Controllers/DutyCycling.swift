@@ -20,6 +20,18 @@ class DutyCycling: NSObject {
     private var timer: Timer!
     private var running = false
     
+    /**
+     Tells if the service is running.
+     
+     - returns: True, if the timer of the service is valid, in a running state; False, otherwise.
+     
+     - Author: Peter Ivanics
+     - Date: 09.01.2017.
+     */
+    var isRunning: Bool {
+        return self.running
+    }
+    
     // MARK: - Initializers
     init?(seconds: Double) throws {
         if seconds <= 0 {
@@ -75,17 +87,5 @@ class DutyCycling: NSObject {
     func stop() {
         self.timer.invalidate()
         self.running = false
-    }
-    
-    /**
-     Tells if the service is running.
-     
-     - returns: True, if the timer of the service is valid, in a running state; False, otherwise.
-     
-     - Author: Peter Ivanics
-     - Date: 09.01.2017.
-     */
-    var isRunning: Bool {
-        return self.running
     }
 }
