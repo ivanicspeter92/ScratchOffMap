@@ -5,6 +5,7 @@ class Coordinates: Object {
     dynamic var longitude: Double = 0
     dynamic var latitude: Double = 0
     dynamic var altitude: Double = 0
+    dynamic var country: Country?
     
     public override var description: String {
         return self.longitude.description + "," + self.latitude.description
