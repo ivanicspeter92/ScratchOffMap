@@ -1,12 +1,12 @@
-import Foundation
+import Realm
 
-public struct Coordinates {
+public class Coordinates: RLMObject {
     // MARK: - Variables
     public let longitude: Double
     public let latitude: Double
     public let altitude: Double?
     
-    public var description: String {
+    public override var description: String {
         return self.longitude.description + "," + self.latitude.description
     }
     
@@ -15,9 +15,11 @@ public struct Coordinates {
         self.latitude = latitude
         self.longitude = longitude
         self.altitude = altitude
+        
+        super.init()
     }
     
-    public init?(string: String) {
+    public convenience init?(string: String) {
         let coordinatesArray = string.components(separatedBy: ",")
         
         switch coordinatesArray.count {
