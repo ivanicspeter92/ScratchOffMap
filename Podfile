@@ -7,6 +7,7 @@ target 'ScratchOffMap' do
 
   # Pods for ScratchOffMap
   pod 'RealmSwift'
+  pod 'SwifterSwift'
   
   target 'ScratchOffMapTests' do
     inherit! :search_paths
