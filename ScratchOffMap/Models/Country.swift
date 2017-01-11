@@ -6,21 +6,25 @@
 //  Copyright © 2016 Peter Ivanics. All rights reserved.
 //
 
-import UIKit
+import RealmSwift
 
-public struct Country {
+public class Country: Object {
     // MARK: - Variables
-    let name: String
-    let code: String?
+    dynamic var name: String = ""
+    dynamic var code: String? = nil
     
     // MARK: - Initializers
-    init?(name: String) {
-        self.name = name
-        self.code = NSLocale.localeCode(forCountry: name)
-    }
-    
-    init(name: String, code: String? = nil) {
+    convenience init(name: String, code: String? = nil) {
+        self.init()
+        
         self.name = name
         self.code = code
+    }
+    
+    convenience init?(name: String) {
+        self.init()
+        
+        self.name = name
+        self.code = NSLocale.localeCode(forCountry: name)
     }
 }
