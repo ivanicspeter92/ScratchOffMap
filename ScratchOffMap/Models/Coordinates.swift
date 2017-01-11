@@ -1,4 +1,5 @@
 import RealmSwift
+import MapKit
 
 class Coordinates: Object {
     // MARK: - Variables
@@ -40,5 +41,13 @@ class Coordinates: Object {
             return nil
         }
         return nil
+    }
+    
+    convenience init(location: CLLocation) {
+        self.init()
+        
+        self.latitude = location.coordinate.latitude
+        self.longitude = location.coordinate.longitude
+        self.timestamp = location.timestamp
     }
 }
