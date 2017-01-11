@@ -1,25 +1,25 @@
-import Realm
+import RealmSwift
 
-public class Coordinates: RLMObject {
+class Coordinates: Object {
     // MARK: - Variables
-    public let longitude: Double
-    public let latitude: Double
-    public let altitude: Double?
+    dynamic var longitude: Double = 0
+    dynamic var latitude: Double = 0
+    dynamic var altitude: Double = 0
     
     public override var description: String {
         return self.longitude.description + "," + self.latitude.description
     }
     
     //MARK: - Initializers
-    public init(latitude: Double, longitude: Double, altitude: Double? = nil) {
+    convenience init(latitude: Double, longitude: Double, altitude: Double = 0) {
+        self.init()
+        
         self.latitude = latitude
         self.longitude = longitude
         self.altitude = altitude
-        
-        super.init()
     }
     
-    public convenience init?(string: String) {
+    convenience init?(string: String) {
         let coordinatesArray = string.components(separatedBy: ",")
         
         switch coordinatesArray.count {

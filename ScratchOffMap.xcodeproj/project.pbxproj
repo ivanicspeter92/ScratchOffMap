@@ -28,6 +28,11 @@
 		E5C1A6EB1E240A8000E934D8 /* WorldMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6EA1E240A8000E934D8 /* WorldMapViewController.swift */; };
 		E5C1A6ED1E240AD600E934D8 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6EC1E240AD600E934D8 /* SettingsTableViewController.swift */; };
 		E5C1A6F21E24127E00E934D8 /* DutyCyclingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6F11E24127E00E934D8 /* DutyCyclingTests.swift */; };
+		E5C3F2421E265E3B005D5621 /* CoordinateCollectorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3F23F1E265E3B005D5621 /* CoordinateCollectorService.swift */; };
+		E5C3F2431E265E3B005D5621 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3F2401E265E3B005D5621 /* DatabaseManager.swift */; };
+		E5C3F2441E265E3B005D5621 /* LifecycleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3F2411E265E3B005D5621 /* LifecycleController.swift */; };
+		E5C3F2461E265E50005D5621 /* DatabaseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3F2451E265E50005D5621 /* DatabaseManagerTests.swift */; };
+		E5C3F2481E265FC8005D5621 /* RLMResults+ToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3F2471E265FC8005D5621 /* RLMResults+ToArray.swift */; };
 		E5F4F2A91DF61DC200B23C83 /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = E5F4F2A81DF61DC200B23C83 /* Countries.json */; };
 		E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4F2AA1DF61E2D00B23C83 /* Country.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +88,11 @@
 		E5C1A6EA1E240A8000E934D8 /* WorldMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldMapViewController.swift; sourceTree = "<group>"; };
 		E5C1A6EC1E240AD600E934D8 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		E5C1A6F11E24127E00E934D8 /* DutyCyclingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DutyCyclingTests.swift; sourceTree = "<group>"; };
+		E5C3F23F1E265E3B005D5621 /* CoordinateCollectorService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateCollectorService.swift; sourceTree = "<group>"; };
+		E5C3F2401E265E3B005D5621 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		E5C3F2411E265E3B005D5621 /* LifecycleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifecycleController.swift; sourceTree = "<group>"; };
+		E5C3F2451E265E50005D5621 /* DatabaseManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManagerTests.swift; sourceTree = "<group>"; };
+		E5C3F2471E265FC8005D5621 /* RLMResults+ToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLMResults+ToArray.swift"; sourceTree = "<group>"; };
 		E5F4F2A81DF61DC200B23C83 /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
 		E5F4F2AA1DF61E2D00B23C83 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +209,7 @@
 		E5917E8A1E24BB78008CA8D4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5C3F2451E265E50005D5621 /* DatabaseManagerTests.swift */,
 				E5C1A6F11E24127E00E934D8 /* DutyCyclingTests.swift */,
 				E5917E8F1E24BEFF008CA8D4 /* GeoCoderTests.swift */,
 			);
@@ -227,6 +238,7 @@
 				E556D00F1DF75DAC00575730 /* String+EmojiFlag.swift */,
 				E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */,
 				E5917E921E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift */,
+				E5C3F2471E265FC8005D5621 /* RLMResults+ToArray.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +268,9 @@
 				E51E622A1DF61101004621B7 /* AppDelegate.swift */,
 				E5917E881E24BAFD008CA8D4 /* DutyCycling.swift */,
 				E5917E8D1E24BEEF008CA8D4 /* GeoCoder.swift */,
+				E5C3F23F1E265E3B005D5621 /* CoordinateCollectorService.swift */,
+				E5C3F2401E265E3B005D5621 /* DatabaseManager.swift */,
+				E5C3F2411E265E3B005D5621 /* LifecycleController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -554,14 +569,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C3F2421E265E3B005D5621 /* CoordinateCollectorService.swift in Sources */,
 				E5C1A6E41E24084300E934D8 /* Coordinates.swift in Sources */,
 				E5C1A6E71E24087F00E934D8 /* String+ToDouble.swift in Sources */,
 				E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */,
 				E5917E891E24BAFD008CA8D4 /* DutyCycling.swift in Sources */,
+				E5C3F2441E265E3B005D5621 /* LifecycleController.swift in Sources */,
 				E5917E8E1E24BEEF008CA8D4 /* GeoCoder.swift in Sources */,
 				E51E622B1DF61101004621B7 /* AppDelegate.swift in Sources */,
 				E5C1A6EB1E240A8000E934D8 /* WorldMapViewController.swift in Sources */,
+				E5C3F2431E265E3B005D5621 /* DatabaseManager.swift in Sources */,
 				E556D0101DF75DAC00575730 /* String+EmojiFlag.swift in Sources */,
+				E5C3F2481E265FC8005D5621 /* RLMResults+ToArray.swift in Sources */,
 				E5917E931E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift in Sources */,
 				E5C1A6ED1E240AD600E934D8 /* SettingsTableViewController.swift in Sources */,
 			);
@@ -575,6 +594,7 @@
 				E556D0141DF761ED00575730 /* String+EmojiFlagTests.swift in Sources */,
 				E5917E951E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift in Sources */,
 				E5C1A6F21E24127E00E934D8 /* DutyCyclingTests.swift in Sources */,
+				E5C3F2461E265E50005D5621 /* DatabaseManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
