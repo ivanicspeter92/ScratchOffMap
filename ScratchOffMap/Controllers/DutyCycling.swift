@@ -64,28 +64,34 @@ class DutyCycling: NSObject {
     }
 
     // MARK - Methods
-    func setTimer(intervalInSeconds: Double) {
+    final func setTimer(intervalInSeconds: Double) {
         self.timer = Timer.scheduledTimer(timeInterval: self.intervalInSeconds, target: self, selector: #selector(DutyCycling.execute), userInfo: nil, repeats: true)
     }
     
-    func start() {
+    final func start() {
         self.timer.fire()
         RunLoop.current.add(self.timer, forMode: RunLoopMode.commonModes)
         self.running = true
     }
     
     /**
-     Implements the functionality when the timer ticks. Should be overridden in sublclasses.
+     Implements the functionality when the timer ticks. Checks if sufficient amount of time has elapsed since the last time tick.
      
      - Author: Peter Ivanics
-     - Date: 09.01.2017.
+     - Date: 10.01.2017.
      */
-    func execute() {
-        self.lastExecution = Date(timeIntervalSinceNow: 0)
+    final func execute() {
+        if self.lastExecution <= Date(timeIntervalSinceNow: -self.intervalInSeconds) {
+            self.performTask()
+            self.lastExecution = Date(timeIntervalSinceNow: 0)
+        }
     }
     
-    func stop() {
+    final func stop() {
         self.timer.invalidate()
         self.running = false
+    }
+    
+    func performTask() {
     }
 }
