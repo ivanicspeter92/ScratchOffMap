@@ -55,7 +55,7 @@ class GeoCodingTests: XCTestCase {
         })
         
         self.waitForExpectations(timeout: 5) { (error) in
-            XCTAssertNil(error, "Geocoding query timed out")
+            XCTAssertNil(error, "Geocoding query timed out - maybe you did not allow access to location in the application?")
         }
     }
 }
