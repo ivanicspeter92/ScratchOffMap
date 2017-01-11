@@ -27,17 +27,20 @@ class GeoCoder {
         self.locationManager.requestWhenInUseAuthorization()
         
         if self.hasAccessToLocation {
-            self.geoCoder.reverseGeocodeLocation(location) { (placemarks, error) -> Void in
-                if let placeArray = placemarks as [CLPlacemark]! {
-                    var placeMark: CLPlacemark!
-                    placeMark = placeArray[0]
-                    
-                    print(placeMark)
-                    if let country = placeMark.addressDictionary?["Country"] as? String {
-                        completion(Country(name: country))
-                    } else {
-                        completion(nil)
-                    }
+            self.attemptDecoding(location: location, completion: completion)
+        }
+    }
+    
+    static private func attemptDecoding(location: CLLocation, completion: @escaping ((Country?) -> Void)) {
+        self.geoCoder.reverseGeocodeLocation(location) { (placemarks, error) -> Void in
+            if let placeArray = placemarks as [CLPlacemark]! {
+                var placeMark: CLPlacemark!
+                placeMark = placeArray[0]
+                
+                if let country = placeMark.addressDictionary?["Country"] as? String {
+                    completion(Country(name: country))
+                } else {
+                    completion(nil)
                 }
             }
         }
