@@ -14,21 +14,12 @@ public protocol GeoCoderDelegate {
 
 class GeoCoder {
     // MARK: - Variables
-    static private let locationManager = CLLocationManager()
     static private let geoCoder = CLGeocoder()
-    
-    static private var hasAccessToLocation: Bool {
-        return CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways
-    }
     
     // MARK: - Methods
     static func decodeCountry(ofPoint: Coordinates, completion: @escaping ((Country?) -> Void)) {
         let location = CLLocation(latitude: ofPoint.latitude, longitude: ofPoint.longitude)
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if self.hasAccessToLocation {
-            self.attemptDecoding(location: location, completion: completion)
-        }
+        self.attemptDecoding(location: location, completion: completion)
     }
     
     static private func attemptDecoding(location: CLLocation, completion: @escaping ((Country?) -> Void)) {
