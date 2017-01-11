@@ -10,7 +10,7 @@ import XCTest
 @testable import ScratchOffMap
 
 class CoordinatesTests: XCTestCase {
-    func testExample() {
+    func testTimestampElapses() {
         let first = Coordinates(latitude: 28.55943, longitude: -140.11963)
         sleep(1)
         let second = Coordinates(latitude: -64.04144, longitude: -155.58838)
