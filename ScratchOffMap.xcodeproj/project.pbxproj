@@ -22,6 +22,7 @@
 		E5917E901E24BEFF008CA8D4 /* GeoCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E8F1E24BEFF008CA8D4 /* GeoCoderTests.swift */; };
 		E5917E931E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E921E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift */; };
 		E5917E951E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E941E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift */; };
+		E5B0DED41E26B0660057F42D /* CoordinatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0DED31E26B0660057F42D /* CoordinatesTests.swift */; };
 		E5C1A6E41E24084300E934D8 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6E31E24084300E934D8 /* Coordinates.swift */; };
 		E5C1A6E71E24087F00E934D8 /* String+ToDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */; };
 		E5C1A6E91E240A2900E934D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C1A6E81E240A2900E934D8 /* MapKit.framework */; };
@@ -82,6 +83,7 @@
 		E5917E8F1E24BEFF008CA8D4 /* GeoCoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCoderTests.swift; sourceTree = "<group>"; };
 		E5917E921E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+LocaleCodeForCountry.swift"; sourceTree = "<group>"; };
 		E5917E941E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+LocaleCodeForCountryTests.swift"; sourceTree = "<group>"; };
+		E5B0DED31E26B0660057F42D /* CoordinatesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatesTests.swift; sourceTree = "<group>"; };
 		E5C1A6E31E24084300E934D8 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ToDouble.swift"; sourceTree = "<group>"; };
 		E5C1A6E81E240A2900E934D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -228,6 +230,7 @@
 		E5917E8C1E24BB81008CA8D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E5B0DED31E26B0660057F42D /* CoordinatesTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5917E901E24BEFF008CA8D4 /* GeoCoderTests.swift in Sources */,
+				E5B0DED41E26B0660057F42D /* CoordinatesTests.swift in Sources */,
 				E556D0141DF761ED00575730 /* String+EmojiFlagTests.swift in Sources */,
 				E5917E951E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift in Sources */,
 				E5C1A6F21E24127E00E934D8 /* DutyCyclingTests.swift in Sources */,

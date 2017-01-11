@@ -6,6 +6,7 @@ class Coordinates: Object {
     dynamic var latitude: Double = 0
     dynamic var altitude: Double = 0
     dynamic var country: Country?
+    dynamic var timestamp = Date()
     
     public override var description: String {
         return self.longitude.description + "," + self.latitude.description
@@ -18,6 +19,7 @@ class Coordinates: Object {
         self.latitude = latitude
         self.longitude = longitude
         self.altitude = altitude
+        self.timestamp = Date()
     }
     
     convenience init?(string: String) {
