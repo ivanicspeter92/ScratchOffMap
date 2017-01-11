@@ -38,4 +38,31 @@ class DatabaseManagerTests: XCTestCase {
         let retrievedCoordinates = DatabaseManager.selectCoordinates()
         XCTAssertEqual(coordinates, retrievedCoordinates)
     }
+    
+    func testInsertingAndRetrievingCoordinatesWithoutCountry() {
+        DatabaseManager.deleteAllCoordinates()
+        
+        let kumpula = Coordinates(latitude: 60.208445, longitude: 24.966967)
+        DatabaseManager.insert(coordinates: kumpula)
+        
+        let retrievedCoordinates = DatabaseManager.selectCoordinates()
+        XCTAssertEqual(1, retrievedCoordinates.count)
+        XCTAssertEqual(kumpula, retrievedCoordinates[0])
+        XCTAssertEqual(kumpula.country, retrievedCoordinates[0].country)
+        XCTAssertEqual(nil, retrievedCoordinates[0].country)
+    }
+    
+    func testInsertingAndRetrievingCoordinatesWithCountry() {
+        DatabaseManager.deleteAllCoordinates()
+        
+        let kumpula = Coordinates(latitude: 60.208445, longitude: 24.966967)
+        kumpula.country = Country(name: "Finland")
+        
+        DatabaseManager.insert(coordinates: kumpula)
+        
+        let retrievedCoordinates = DatabaseManager.selectCoordinates()
+        XCTAssertEqual(1, retrievedCoordinates.count)
+        XCTAssertEqual(kumpula, retrievedCoordinates[0])
+        XCTAssertEqual(kumpula.country, retrievedCoordinates[0].country)
+    }
 }
