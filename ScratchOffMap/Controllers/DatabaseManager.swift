@@ -14,6 +14,21 @@ class DatabaseManager {
         do {
             try self.database.write {
                 self.database.add(coordinates)
+                
+                NSLog(coordinates.debugDescription)
+            }
+        } catch {
+        }
+
+    }
+    
+    static func insert(coordinates: Coordinates, country: Country) {
+        do {
+            try self.database.write {
+                coordinates.country = country
+                self.database.add(coordinates)
+                
+                NSLog("Coordinates inserted: " + coordinates.description + "; country: " + country.description)
             }
         } catch {
         }
@@ -31,7 +46,6 @@ class DatabaseManager {
                 self.database.delete(self.database.objects(Coordinates.self))
             }
         } catch {
-            
         }
     }
 }
