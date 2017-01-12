@@ -10,6 +10,8 @@ import RealmSwift
 
 public class Country: Object {
     // MARK: - Variables
+    fileprivate dynamic var id: String = ""
+    
     dynamic var name: String = ""
     dynamic var code: String? = nil
     
@@ -27,6 +29,8 @@ public class Country: Object {
         
         self.name = name
         self.code = code
+        
+        self.id = self.description
     }
     
     convenience init?(name: String) {
@@ -36,7 +40,7 @@ public class Country: Object {
         self.code = NSLocale.localeCode(forCountry: name)
     }
     
-    func primaryKey() -> String {
-        return description
+    override public class func primaryKey() -> String {
+        return "id"
     }
 }
