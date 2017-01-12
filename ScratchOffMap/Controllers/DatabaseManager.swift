@@ -13,9 +13,10 @@ class DatabaseManager {
     static func insert(coordinates: Coordinates) {
         do {
             try self.database.write {
-                self.database.add(coordinates)
+                self.database.add(coordinates, update: true)
             }
         } catch {
+            self.database.cancelWrite()
         }
     }
     
@@ -29,6 +30,7 @@ class DatabaseManager {
                 NSLog("Realm file: " + self.database.configuration.fileURL!.description)
             }
         } catch {
+            self.database.cancelWrite()
         }
     }
     
@@ -44,6 +46,7 @@ class DatabaseManager {
                 self.database.delete(self.database.objects(Coordinates.self))
             }
         } catch {
+            self.database.cancelWrite()
         }
     }
 }

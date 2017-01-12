@@ -17,13 +17,13 @@ class DatabaseManagerTests: XCTestCase {
     
     func testIfAfterInsertingCoordinatesSelectingReturnsOneMoreItem() {
         let originalPoints = DatabaseManager.selectCoordinates()
-        let kumpula = Coordinates(latitude: 60.208445, longitude: 24.966967)
+        let newPoint = Coordinates(latitude: Double(arc4random()), longitude: Double(arc4random()))
         
-        DatabaseManager.insert(coordinates: kumpula)
+        DatabaseManager.insert(coordinates: newPoint)
         
         let newPoints = DatabaseManager.selectCoordinates()
         XCTAssertEqual(originalPoints.count + 1, newPoints.count)
-        XCTAssertTrue(newPoints.contains(kumpula))
+        XCTAssertTrue(newPoints.contains(newPoint))
     }
     
     func testInsertingMultiplePointsToEmptyDatabaseReturnsTheSameArray() {

@@ -3,6 +3,8 @@ import MapKit
 
 class Coordinates: Object {
     // MARK: - Variables
+    fileprivate dynamic var id: String = ""
+    
     dynamic var longitude: Double = 0
     dynamic var latitude: Double = 0
     dynamic var altitude: Double = 0
@@ -21,6 +23,8 @@ class Coordinates: Object {
         self.longitude = longitude
         self.altitude = altitude
         self.timestamp = Date()
+        
+        self.id = self.longitude.description + "," + self.latitude.description
     }
     
     convenience init?(string: String) {
@@ -49,5 +53,9 @@ class Coordinates: Object {
         self.latitude = location.coordinate.latitude
         self.longitude = location.coordinate.longitude
         self.timestamp = location.timestamp
+    }
+    
+    override class func primaryKey() -> String {
+        return "id"
     }
 }

@@ -35,4 +35,8 @@ public class Country: Object {
         self.name = name
         self.code = NSLocale.localeCode(forCountry: name)
     }
+    
+    func primaryKey() -> String {
+        return description
+    }
 }
