@@ -19,7 +19,6 @@ class DatabaseManager {
             }
         } catch {
         }
-
     }
     
     static func insert(coordinates: Coordinates, country: Country) {
