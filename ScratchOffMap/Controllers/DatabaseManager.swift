@@ -14,8 +14,6 @@ class DatabaseManager {
         do {
             try self.database.write {
                 self.database.add(coordinates)
-                
-                NSLog(coordinates.debugDescription)
             }
         } catch {
         }
@@ -28,6 +26,7 @@ class DatabaseManager {
                 self.database.add(coordinates)
                 
                 NSLog("Coordinates inserted: " + coordinates.description + "; country: " + country.description)
+                NSLog("Realm file: " + self.database.configuration.fileURL!.description)
             }
         } catch {
         }
