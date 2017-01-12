@@ -10,6 +10,7 @@ import MapKit
 
 class CoordinateCollectorService: DutyCycling {
     // MARK: - Variables
+    var collectPointsWithoutCountry = true
     private let locationManager = CLLocationManager()
     
     private var hasAccessToLocation: Bool {
@@ -48,7 +49,7 @@ extension CoordinateCollectorService: CLLocationManagerDelegate {
                 
                 if let country = country {
                     DatabaseManager.insert(coordinates: coordinates, country: country)
-                } else { // if user allows inserting points without knowing the country
+                } else if self.collectPointsWithoutCountry {
                     DatabaseManager.insert(coordinates: coordinates)
                 }
             })
