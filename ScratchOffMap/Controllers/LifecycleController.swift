@@ -11,11 +11,10 @@ import Foundation
 class LifecycleController {
 
     // MARK: - Variables
-//    static let coordinateCollector: CoordinateCollectorService
-//    
+    static let coordinateCollector = try! CoordinateCollectorService(seconds: 5)
+//
 //    // MARK: - Initializers
 //    private init() {
 //        coordinateCollector = try! CoordinateCollectorService(days: 1)!
 //    }
-    
 }
