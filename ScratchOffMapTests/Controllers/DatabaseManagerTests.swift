@@ -65,4 +65,19 @@ class DatabaseManagerTests: XCTestCase {
         XCTAssertEqual(kumpula, retrievedCoordinates[0])
         XCTAssertEqual(kumpula.country, retrievedCoordinates[0].country)
     }
+    
+    func testDoesNotStoreDuplicateCoordinates() {
+        DatabaseManager.deleteAllCoordinates()
+        
+        var retrievedCoordinates = DatabaseManager.selectCoordinates()
+        XCTAssertEqual(0, retrievedCoordinates.count)
+        
+        DatabaseManager.insert(coordinates: Coordinates(latitude: 60.208445, longitude: 24.966967))
+        retrievedCoordinates = DatabaseManager.selectCoordinates()
+        XCTAssertEqual(1, retrievedCoordinates.count)
+        
+        DatabaseManager.insert(coordinates: Coordinates(latitude: 60.208445, longitude: 24.966967))
+        retrievedCoordinates = DatabaseManager.selectCoordinates()
+        XCTAssertEqual(1, retrievedCoordinates.count)
+    }
 }
