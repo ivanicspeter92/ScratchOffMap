@@ -52,10 +52,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="YZb-PI-4Du">
+                            <tableViewSection headerTitle="Coordinate collector service" id="YZb-PI-4Du">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="XYP-GB-GB4" detailTextLabel="u2u-4U-PIz" style="IBUITableViewCellStyleValue1" id="WbB-AZ-Fwh" userLabel="DutyCyclingCell">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WbB-AZ-Fwh" id="RBY-C4-qZW">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -78,8 +78,37 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Cog-m2-anL" userLabel="PointsWithoutCountryCell">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cog-m2-anL" id="Hdm-KZ-XjD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EbJ-1W-Fen">
+                                                    <rect key="frame" x="309" y="8" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchValueChanged:" destination="ioR-67-NMK" eventType="valueChanged" id="7cp-hU-epp"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collect points outside countries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8au-H7-xvp">
+                                                    <rect key="frame" x="16" y="11" width="284" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EbJ-1W-Fen" secondAttribute="trailing" constant="9" id="9Yw-fJ-EaP"/>
+                                                <constraint firstItem="8au-H7-xvp" firstAttribute="centerY" secondItem="Hdm-KZ-XjD" secondAttribute="centerY" id="QVx-NN-Pna"/>
+                                                <constraint firstItem="EbJ-1W-Fen" firstAttribute="leading" secondItem="8au-H7-xvp" secondAttribute="trailing" constant="9" id="aDD-AF-PDS"/>
+                                                <constraint firstItem="8au-H7-xvp" firstAttribute="leading" secondItem="Hdm-KZ-XjD" secondAttribute="leadingMargin" constant="8" id="hpE-Gr-3cV"/>
+                                                <constraint firstItem="EbJ-1W-Fen" firstAttribute="centerY" secondItem="Hdm-KZ-XjD" secondAttribute="centerY" constant="2" id="pUO-Ft-XEv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Ww0-mq-83t" style="IBUITableViewCellStyleDefault" id="Ji9-Np-iTG" userLabel="DeletePointsCell">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ji9-Np-iTG" id="bIi-KO-j9X">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -104,10 +133,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Settings" id="NI5-eH-YI8"/>
+                    <connections>
+                        <outlet property="counriesOutsideCountriesSwitch" destination="EbJ-1W-Fen" id="e3q-mX-gpd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BxA-MC-BiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="468"/>
+            <point key="canvasLocation" x="1872.8" y="467.3163418290855"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Lmw-Yt-NMU">

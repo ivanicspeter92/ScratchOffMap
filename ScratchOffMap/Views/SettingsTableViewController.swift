@@ -9,6 +9,8 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
+    @IBOutlet weak var counriesOutsideCountriesSwitch: UISwitch!
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -17,7 +19,7 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 2
+            return 3
         default:
             return 0
         }
@@ -26,6 +28,13 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             self.displayDutyCyclingPicker()
+        }
+    }
+    
+    // MARK: - Event handlers
+    @IBAction func switchValueChanged(_ sender: UISwitch) {
+        if sender == self.counriesOutsideCountriesSwitch {
+            LifecycleController.coordinateCollector?.collectPointsWithoutCountry = sender.isOn
         }
     }
     
