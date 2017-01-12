@@ -10,14 +10,12 @@ import RealmSwift
 
 public class Country: Object {
     // MARK: - Variables
-    fileprivate dynamic var id: String = ""
-    
     dynamic var name: String = ""
     dynamic var code: String? = nil
     
     override public var description: String {
         if let code = code {
-            return "[" + code + "] " + name
+            return "[" + code + "]" + name
         } else {
             return name
         }
@@ -29,11 +27,9 @@ public class Country: Object {
         
         self.name = name
         self.code = code
-        
-        self.id = self.description
     }
     
-    convenience init?(name: String) {
+    convenience init(name: String) {
         self.init()
         
         self.name = name
@@ -41,6 +37,6 @@ public class Country: Object {
     }
     
     override public class func primaryKey() -> String {
-        return "id"
+        return "code"
     }
 }

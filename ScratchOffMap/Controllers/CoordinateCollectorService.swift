@@ -21,11 +21,11 @@ class CoordinateCollectorService: DutyCycling {
     override init?(seconds: Double) throws {
         try super.init(seconds: seconds)
         
-        self.locationManager.stopUpdatingLocation()
-        self.locationManager.stopUpdatingHeading()
-        self.locationManager.stopMonitoringSignificantLocationChanges()
-        self.locationManager.pausesLocationUpdatesAutomatically = true
-        self.locationManager.allowsBackgroundLocationUpdates = false
+//        self.locationManager.stopUpdatingLocation()
+//        self.locationManager.stopUpdatingHeading()
+//        self.locationManager.stopMonitoringSignificantLocationChanges()
+//        self.locationManager.pausesLocationUpdatesAutomatically = true
+//        self.locationManager.allowsBackgroundLocationUpdates = false
         
         self.locationManager.delegate = self
         

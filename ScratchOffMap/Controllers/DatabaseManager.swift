@@ -49,4 +49,30 @@ class DatabaseManager {
             self.database.cancelWrite()
         }
     }
+    
+    static func insert(country: Country) {
+        do {
+            try self.database.write {
+                self.database.add(country, update: true)
+                
+                NSLog("Country inserted: " + country.description)
+            }
+        } catch {
+            self.database.cancelWrite()
+        }
+    }
+    
+    static func deleteAllCountries() {
+        do {
+            try self.database.write {
+                self.database.delete(self.database.objects(Country.self))
+            }
+        } catch {
+            self.database.cancelWrite()
+        }
+    }
+    
+    static func selectCountries() -> [Country] {
+        return self.database.objects(Country.self).toArray(ofType: Country.self)
+    }
 }

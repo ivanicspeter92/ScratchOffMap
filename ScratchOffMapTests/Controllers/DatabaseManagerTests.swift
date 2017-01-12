@@ -80,4 +80,23 @@ class DatabaseManagerTests: XCTestCase {
         retrievedCoordinates = DatabaseManager.selectCoordinates()
         XCTAssertEqual(1, retrievedCoordinates.count)
     }
+    
+    func testDoesNotStoreDuplicateCountries() {
+        DatabaseManager.deleteAllCountries()
+        
+        let countries = [
+            Country(name: "Hungary"),
+            Country(name: "Finland"),
+            Country(name: "Finland"),
+            Country(name: "Mexico"),
+            Country(name: "Hungary")
+        ]
+        
+        for country in countries {
+            DatabaseManager.insert(country: country)
+        }
+        
+        let retrievedCountries = DatabaseManager.selectCountries()
+        XCTAssertEqual(3, retrievedCountries.count)
+    }
 }
