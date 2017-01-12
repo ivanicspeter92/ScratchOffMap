@@ -14,9 +14,12 @@ enum DutyCyclingException: Error {
 
 class DutyCycling: NSObject {
     // MARK: - Variables
-    private var serviceName: String?
     private(set) var lastExecution: Date
-    private var intervalInSeconds: Double
+    private var intervalInSeconds: Double {
+        didSet {
+           NSLog(String(describing: self) + " - interval changed to " + self.intervalInSeconds.description)
+        }
+    }
     private var timer: Timer!
     private var running = false
     
@@ -46,21 +49,16 @@ class DutyCycling: NSObject {
         setTimer(intervalInSeconds: intervalInSeconds)
     }
     
-    convenience init?(seconds: Double, serviceName: String? = nil) throws {
-        try self.init(seconds: seconds)
-        self.serviceName = serviceName
+    convenience init?(minutes: Double) throws {
+        try self.init(seconds: minutes * 60)
     }
     
-    convenience init?(minutes: Double, serviceName: String? = nil) throws {
-        try self.init(seconds: minutes * 60, serviceName: serviceName)
+    convenience init?(hours: Double) throws {
+        try self.init(minutes: hours * 60)
     }
     
-    convenience init?(hours: Double, serviceName: String? = nil) throws {
-        try self.init(minutes: hours * 60, serviceName: serviceName)
-    }
-    
-    convenience init?(days: Double, serviceName: String? = nil) throws {
-        try self.init(hours: days * 24, serviceName: serviceName)
+    convenience init?(days: Double) throws {
+        try self.init(hours: days * 24)
     }
 
     // MARK - Methods
