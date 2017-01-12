@@ -13,6 +13,14 @@ public class Country: Object {
     dynamic var name: String = ""
     dynamic var code: String? = nil
     
+    override public var description: String {
+        if let code = code {
+            return "[" + code + "] " + name
+        } else {
+            return name
+        }
+    }
+    
     // MARK: - Initializers
     convenience init(name: String, code: String? = nil) {
         self.init()
