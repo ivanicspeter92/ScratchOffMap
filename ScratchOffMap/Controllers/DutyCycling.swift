@@ -15,7 +15,7 @@ enum DutyCyclingException: Error {
 class DutyCycling: NSObject {
     // MARK: - Variables
     private(set) var lastExecution: Date
-    private var intervalInSeconds: Double {
+    private(set) var intervalInSeconds: Double {
         didSet {
            NSLog(String(describing: self) + " - interval changed to " + self.intervalInSeconds.description)
         }
