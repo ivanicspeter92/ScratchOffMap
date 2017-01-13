@@ -17,6 +17,8 @@
 		E51E62351DF61101004621B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51E62331DF61101004621B7 /* LaunchScreen.storyboard */; };
 		E51E624B1DF61101004621B7 /* ScratchOffMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E624A1DF61101004621B7 /* ScratchOffMapUITests.swift */; };
 		E523D4141E29784400C42677 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523D4131E29784400C42677 /* String+Image.swift */; };
+		E523D4151E297D2300C42677 /* TestCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EAAB91E28CF46005C3D10 /* TestCoordinates.swift */; };
+		E523D4171E297E1800C42677 /* Coordinates+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523D4161E297E1800C42677 /* Coordinates+MKAnnotation.swift */; };
 		E556D0101DF75DAC00575730 /* String+EmojiFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E556D00F1DF75DAC00575730 /* String+EmojiFlag.swift */; };
 		E556D0141DF761ED00575730 /* String+EmojiFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */; };
 		E56EAABA1E28CF46005C3D10 /* TestCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EAAB91E28CF46005C3D10 /* TestCoordinates.swift */; };
@@ -82,6 +84,7 @@
 		E51E624A1DF61101004621B7 /* ScratchOffMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchOffMapUITests.swift; sourceTree = "<group>"; };
 		E51E624C1DF61101004621B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E523D4131E29784400C42677 /* String+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
+		E523D4161E297E1800C42677 /* Coordinates+MKAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Coordinates+MKAnnotation.swift"; sourceTree = "<group>"; };
 		E556D00F1DF75DAC00575730 /* String+EmojiFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EmojiFlag.swift"; sourceTree = "<group>"; };
 		E556D0131DF761ED00575730 /* String+EmojiFlagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EmojiFlagTests.swift"; sourceTree = "<group>"; };
 		E56EAAB91E28CF46005C3D10 /* TestCoordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCoordinates.swift; sourceTree = "<group>"; };
@@ -263,6 +266,7 @@
 				E5C1A6E31E24084300E934D8 /* Coordinates.swift */,
 				E5F4F2A81DF61DC200B23C83 /* Countries.json */,
 				E5F4F2AA1DF61E2D00B23C83 /* Country.swift */,
+				E523D4161E297E1800C42677 /* Coordinates+MKAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -603,8 +607,10 @@
 				E556D0101DF75DAC00575730 /* String+EmojiFlag.swift in Sources */,
 				E5C3F2481E265FC8005D5621 /* RLMResults+ToArray.swift in Sources */,
 				E5917E931E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift in Sources */,
+				E523D4171E297E1800C42677 /* Coordinates+MKAnnotation.swift in Sources */,
 				E506C3471E292FAB00CC4286 /* CountriesTableViewController.swift in Sources */,
 				E5C1A6ED1E240AD600E934D8 /* SettingsTableViewController.swift in Sources */,
+				E523D4151E297D2300C42677 /* TestCoordinates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
