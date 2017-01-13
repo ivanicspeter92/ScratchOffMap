@@ -75,4 +75,9 @@ class DatabaseManager {
     static func selectCountries() -> [Country] {
         return self.database.objects(Country.self).toArray(ofType: Country.self)
     }
+    
+    static func deleteAllCoordinatesAndCountries() {
+        self.deleteAllCoordinates()
+        self.deleteAllCountries()
+    }
 }
