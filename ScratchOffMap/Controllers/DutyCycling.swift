@@ -15,9 +15,14 @@ enum DutyCyclingException: Error {
 class DutyCycling: NSObject {
     // MARK: - Variables
     private(set) var lastExecution: Date
-    private(set) var intervalInSeconds: Double {
+    var intervalInSeconds: Double {
         didSet {
-           NSLog(String(describing: self) + " - interval changed to " + self.intervalInSeconds.description)
+            if intervalInSeconds > 0 {
+                NSLog(String(describing: self) + " - interval changed to " + self.intervalInSeconds.description)
+                self.timer = Timer.scheduledTimer(timeInterval: self.intervalInSeconds, target: self, selector: #selector(DutyCycling.execute), userInfo: nil, repeats: true)
+            } else {
+                intervalInSeconds = oldValue
+            }
         }
     }
     private var timer: Timer!
@@ -46,7 +51,7 @@ class DutyCycling: NSObject {
         
         super.init()
         
-        setTimer(intervalInSeconds: intervalInSeconds)
+        self.timer = Timer.scheduledTimer(timeInterval: self.intervalInSeconds, target: self, selector: #selector(DutyCycling.execute), userInfo: nil, repeats: true)
     }
     
     convenience init?(minutes: Double) throws {
@@ -62,10 +67,6 @@ class DutyCycling: NSObject {
     }
 
     // MARK - Methods
-    final func setTimer(intervalInSeconds: Double) {
-        self.timer = Timer.scheduledTimer(timeInterval: self.intervalInSeconds, target: self, selector: #selector(DutyCycling.execute), userInfo: nil, repeats: true)
-    }
-    
     final func start() {
         self.timer.fire()
         RunLoop.current.add(self.timer, forMode: RunLoopMode.commonModes)

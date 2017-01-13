@@ -55,4 +55,11 @@ class DutyCyclingTests: XCTestCase {
         self.dutyCycling.stop()
         XCTAssertFalse(self.dutyCycling.isRunning)
     }
+    
+    func testAttemptToModifyCycleTimeToNegativeDoesNothing() {
+        let interval = self.dutyCycling.intervalInSeconds
+        
+        self.self.dutyCycling.intervalInSeconds = -6 // should not do anything
+        XCTAssertEqual(interval, self.dutyCycling.intervalInSeconds)
+    }
 }
