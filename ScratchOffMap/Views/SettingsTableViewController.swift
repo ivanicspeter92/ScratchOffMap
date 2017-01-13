@@ -69,7 +69,7 @@ class SettingsTableViewController: UITableViewController {
         let alert = UIAlertController(title: "Delete Points", message: "Are you sure you want to delete all colelcted points?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (UIAlertAction) in
-            
+            DatabaseManager.deleteAllCoordinatesAndCountries()
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
