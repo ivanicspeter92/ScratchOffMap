@@ -10,6 +10,7 @@
 		84BFEDEFB39542A5F57583D3 /* Pods_ScratchOffMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0B0D89E648C196E1B94E1D /* Pods_ScratchOffMap.framework */; };
 		BB4FB9021969592A190DB876 /* Pods_ScratchOffMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9020693E979B9B6042728C4E /* Pods_ScratchOffMapTests.framework */; };
 		D3F0F953B7862A5D8597F020 /* Pods_ScratchOffMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD7DA815561A5183BDD88FC /* Pods_ScratchOffMapUITests.framework */; };
+		E506C3471E292FAB00CC4286 /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E506C3461E292FAB00CC4286 /* CountriesTableViewController.swift */; };
 		E51E622B1DF61101004621B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51E622A1DF61101004621B7 /* AppDelegate.swift */; };
 		E51E62301DF61101004621B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51E622E1DF61101004621B7 /* Main.storyboard */; };
 		E51E62321DF61101004621B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51E62311DF61101004621B7 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		9020693E979B9B6042728C4E /* Pods_ScratchOffMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScratchOffMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		943F40682EF713C443CCF012 /* Pods-ScratchOffMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchOffMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchOffMapTests/Pods-ScratchOffMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4211A5F87470FBD9533C6D9 /* Pods-ScratchOffMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchOffMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScratchOffMapUITests/Pods-ScratchOffMapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E506C3461E292FAB00CC4286 /* CountriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
 		E51E62271DF61100004621B7 /* ScratchOffMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchOffMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51E622A1DF61101004621B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E51E622F1DF61101004621B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			children = (
 				E5C1A6EA1E240A8000E934D8 /* WorldMapViewController.swift */,
 				E5C1A6EC1E240AD600E934D8 /* SettingsTableViewController.swift */,
+				E506C3461E292FAB00CC4286 /* CountriesTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				E556D0101DF75DAC00575730 /* String+EmojiFlag.swift in Sources */,
 				E5C3F2481E265FC8005D5621 /* RLMResults+ToArray.swift in Sources */,
 				E5917E931E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift in Sources */,
+				E506C3471E292FAB00CC4286 /* CountriesTableViewController.swift in Sources */,
 				E5C1A6ED1E240AD600E934D8 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
