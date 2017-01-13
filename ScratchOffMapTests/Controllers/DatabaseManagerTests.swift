@@ -17,7 +17,7 @@ class DatabaseManagerTests: XCTestCase {
     
     func testIfAfterInsertingCoordinatesSelectingReturnsOneMoreItem() {
         let originalPoints = DatabaseManager.selectCoordinates()
-        let newPoint = Coordinates(latitude: Double(arc4random()), longitude: Double(arc4random()))
+        let newPoint = Coordinates(longitude: Double(arc4random()), latitude: Double(arc4random()))
         
         DatabaseManager.insert(coordinates: newPoint)
         
@@ -29,8 +29,8 @@ class DatabaseManagerTests: XCTestCase {
     func testInsertingMultiplePointsToEmptyDatabaseReturnsTheSameArray() {
         DatabaseManager.deleteAllCoordinates()
         let coordinates: [Coordinates] = [
-            Coordinates(latitude: 28.55943, longitude: -140.11963),
-            Coordinates(latitude: -64.04144, longitude: -155.58838)
+            Coordinates(longitude: -140.11963, latitude: 28.55943),
+            Coordinates(longitude: -155.58838, latitude: -64.04144)
         ]
         
         coordinates.forEach{ DatabaseManager.insert(coordinates: $0) }
@@ -45,7 +45,8 @@ class DatabaseManagerTests: XCTestCase {
         
         let retrievedCoordinates = DatabaseManager.selectCoordinates()
         XCTAssertEqual(1, retrievedCoordinates.count)
-        XCTAssertEqual(TestCoordinates.kumpula, retrievedCoordinates[0])
+        XCTAssertEqual(TestCoordinates.kumpula.latitude, retrievedCoordinates[0].latitude)
+        XCTAssertEqual(TestCoordinates.kumpula.longitude, retrievedCoordinates[0].longitude)
         XCTAssertEqual(TestCoordinates.kumpula.country, retrievedCoordinates[0].country)
         XCTAssertEqual(nil, retrievedCoordinates[0].country)
     }
@@ -53,7 +54,7 @@ class DatabaseManagerTests: XCTestCase {
     func testInsertingAndRetrievingCoordinatesWithCountry() {
         DatabaseManager.deleteAllCoordinates()
         
-        let kumpula = Coordinates(latitude: 60.208445, longitude: 24.966967)
+        let kumpula = TestCoordinates.kumpula
         kumpula.country = Country(name: "Finland")
         
         DatabaseManager.insert(coordinates: kumpula)

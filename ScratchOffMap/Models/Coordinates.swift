@@ -16,7 +16,7 @@ class Coordinates: Object {
     }
     
     //MARK: - Initializers
-    convenience init(latitude: Double, longitude: Double, altitude: Double = 0) {
+    convenience init(longitude: Double, latitude: Double, altitude: Double = 0) {
         self.init()
         
         self.latitude = latitude
@@ -33,12 +33,12 @@ class Coordinates: Object {
         switch coordinatesArray.count {
         case 3:
             if let longitude = coordinatesArray[0].toDouble(), let latitude = coordinatesArray[1].toDouble(), let altitude = coordinatesArray[2].toDouble() {
-                self.init(latitude: latitude, longitude: longitude, altitude: altitude)
+                self.init(longitude: longitude, latitude: latitude, altitude: altitude)
                 return
             }
         case 2:
             if let longitude = coordinatesArray[0].toDouble(), let latitude = coordinatesArray[1].toDouble() {
-                self.init(latitude: latitude, longitude: longitude)
+                self.init(longitude: longitude, latitude: latitude)
                 return
             }
         default:
@@ -57,5 +57,9 @@ class Coordinates: Object {
     
     override class func primaryKey() -> String {
         return "id"
+    }
+    
+    static func ==(lhs: Coordinates, rhs: Coordinates) -> Bool {
+        return lhs.longitude == rhs.longitude && lhs.latitude == rhs.latitude
     }
 }

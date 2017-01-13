@@ -11,9 +11,9 @@ import XCTest
 
 class CoordinatesTests: XCTestCase {
     func testTimestampElapses() {
-        let first = Coordinates(latitude: 28.55943, longitude: -140.11963)
+        let first = Coordinates(longitude: -140.11963, latitude: 28.55943)
         sleep(1)
-        let second = Coordinates(latitude: -64.04144, longitude: -155.58838)
+        let second = Coordinates(longitude: -155.58838, latitude: -64.04144)
         
         XCTAssertTrue(first.timestamp < second.timestamp)
     }
