@@ -13,9 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.insertTestPointsToDatabase()
         LifecycleController.coordinateCollector?.start()
-        // Override point for customization after application launch.
+        
         return true
+    }
+    
+    private func insertTestPointsToDatabase() {
+        TestCoordinates.all.forEach{DatabaseManager.insert(coordinates: $0)}
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
