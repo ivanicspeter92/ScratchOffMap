@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import ScratchOffMap
+import SwifterSwift
 
 class GeoCodingTests: XCTestCase {
     private let finland = Country(name: "Finland", code: "FI")
@@ -18,7 +19,7 @@ class GeoCodingTests: XCTestCase {
     }
     
     func testPointsInHungary() {
-        let coordinates: [Coordinates] = TestCoordinates.pointsInHungary
+        let coordinates: [Coordinates] = TestCoordinates.pointsInHungary.sample(5)
         
         self.assertAsyncGeocodingRequest(coordinatesArray: coordinates, expectedCountry: self.hungary)
     }
