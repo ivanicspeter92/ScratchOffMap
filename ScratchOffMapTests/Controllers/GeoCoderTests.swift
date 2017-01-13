@@ -14,25 +14,17 @@ class GeoCodingTests: XCTestCase {
     private let hungary = Country(name: "Hungary", code: "HU")
     
     func testKumpulaNeighbourhood() {
-        let kumpula = Coordinates(latitude: 60.208445, longitude: 24.966967)
-        
-        self.assertAsyncGeocodingRequest(coordinates: kumpula, expectedCountry: self.finland)
+        self.assertAsyncGeocodingRequest(coordinates: TestCoordinates.kumpula, expectedCountry: self.finland)
     }
     
     func testPointsInHungary() {
-        let coordinates: [Coordinates] = [
-            Coordinates(latitude: 47.4979, longitude: 19.0402),
-            Coordinates(latitude: 47.361515, longitude: 19.852087)
-        ]
+        let coordinates: [Coordinates] = TestCoordinates.pointsInHungary
         
         self.assertAsyncGeocodingRequest(coordinatesArray: coordinates, expectedCountry: self.hungary)
     }
     
     func testPointsOutsideCountries() {
-        let coordinates: [Coordinates] = [
-            Coordinates(latitude: 28.55943, longitude: -140.11963),
-            Coordinates(latitude: -64.04144, longitude: -155.58838)
-        ]
+        let coordinates: [Coordinates] = TestCoordinates.pointsNotInAnyCountry
         
         self.assertAsyncGeocodingRequest(coordinatesArray: coordinates)
     }
