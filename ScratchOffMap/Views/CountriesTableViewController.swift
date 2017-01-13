@@ -18,13 +18,13 @@ class CountriesTableViewController: UITableViewController {
         
         self.visitedCountries = DatabaseManager.selectCountries()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0: return self.visitedCountries.count
@@ -45,10 +45,8 @@ class CountriesTableViewController: UITableViewController {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "CountryCell")!
             
             cell.textLabel?.text = self.visitedCountries[indexPath.row].name
-            if let code = self.visitedCountries[indexPath.row].code {
-                cell.detailTextLabel?.text = code
-//                cell.imageView?.image = code.emojiFlag
-            }
+            cell.detailTextLabel?.text = self.visitedCountries[indexPath.row].code
+            cell.imageView?.image = self.visitedCountries[indexPath.row].code?.emojiFlag.image()
             
             return cell
         }
