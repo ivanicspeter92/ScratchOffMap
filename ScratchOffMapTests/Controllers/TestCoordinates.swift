@@ -14,7 +14,7 @@ class TestCoordinates {
         Coordinates(latitude: 47.4979, longitude: 19.0402),
         Coordinates(latitude: 47.361515, longitude: 19.852087)
     ]
-    static let pointsInNotAnyCounry = [
+    static let pointsNotInAnyCountry = [
         Coordinates(latitude: 28.55943, longitude: -140.11963),
         Coordinates(latitude: -64.04144, longitude: -155.58838)
     ]
