@@ -16,6 +16,7 @@ class DatabaseManager {
                 self.database.add(coordinates, update: true)
                 
                 NSLog("Coordinates inserted: " + coordinates.description)
+                NSLog("Realm file: " + self.database.configuration.fileURL!.description)
             }
         } catch {
             self.database.cancelWrite()
@@ -84,6 +85,10 @@ class DatabaseManager {
     
     static func selectCountries() -> [Country] {
         return self.database.objects(Country.self).toArray(ofType: Country.self)
+    }
+    
+    static func selectCountriesWithCode() -> [Country] {
+        return self.selectCountries().filter{ $0.code != nil }
     }
     
     static func deleteAllCoordinatesAndCountries() {
