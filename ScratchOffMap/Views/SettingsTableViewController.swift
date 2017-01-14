@@ -36,7 +36,7 @@ class SettingsTableViewController: UITableViewController {
     // MARK: - Event handlers
     @IBAction func switchValueChanged(_ sender: UISwitch) {
         if sender == self.counriesOutsideCountriesSwitch {
-            LifecycleController.coordinateCollector?.collectPointsWithoutCountry = sender.isOn
+            LifecycleController.displayCoordinatesWithoutCountry = sender.isOn
         }
     }
     

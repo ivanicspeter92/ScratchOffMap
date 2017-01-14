@@ -14,6 +14,8 @@ class DatabaseManager {
         do {
             try self.database.write {
                 self.database.add(coordinates, update: true)
+                
+                NSLog("Coordinates inserted: " + coordinates.description)
             }
         } catch {
             self.database.cancelWrite()
@@ -23,7 +25,7 @@ class DatabaseManager {
     static func insert(coordinates: Coordinates, country: Country) {
         do {
             try self.database.write {
-                coordinates.country = country
+                coordinates.country = self.selectCountry(withName: country.name) ?? country
                 self.database.add(coordinates, update: true)
                 
                 NSLog("Coordinates inserted: " + coordinates.description + "; country: " + country.description)
@@ -32,6 +34,14 @@ class DatabaseManager {
         } catch {
             self.database.cancelWrite()
         }
+    }
+    
+    private static func selectCountry(withName name: String) -> Country? {
+        return self.database.objects(Country.self).filter(NSPredicate(format: "name = %@", name)).first
+    }
+    
+    private static func selectCountry(withCode code: String) -> Country? {
+        return self.database.objects(Country.self).filter(NSPredicate(format: "code = %@", code)).first
     }
     
     static func selectCoordinates() -> [Coordinates] {

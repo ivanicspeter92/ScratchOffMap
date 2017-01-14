@@ -40,14 +40,14 @@ class GeoCodingTests: XCTestCase {
     private func assertAsyncGeocodingRequest(coordinates: Coordinates, expectedCountry: Country? = nil) {
         let asyncExpectation = expectation(description: "longRunningFunction")
         
-        GeoCoder.decodeCountry(ofPoint: coordinates, completion: { (country) in
+        GeoCoder().decodeCountry(ofPoint: coordinates, completion: { (country) in
             XCTAssertEqual(expectedCountry?.name, country?.name)
             XCTAssertEqual(expectedCountry?.code, country?.code)
             
             asyncExpectation.fulfill()
         })
         
-        self.waitForExpectations(timeout: 5) { (error) in
+        self.waitForExpectations(timeout: 10) { (error) in
             XCTAssertNil(error, "Geocoding query timed out - maybe you did not allow access to location in the application?")
         }
     }

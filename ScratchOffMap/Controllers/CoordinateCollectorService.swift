@@ -10,7 +10,6 @@ import MapKit
 
 class CoordinateCollectorService: DutyCycling {
     // MARK: - Variables
-    var collectPointsWithoutCountry = true
     private let locationManager = CLLocationManager()
     
     private var hasAccessToLocation: Bool {

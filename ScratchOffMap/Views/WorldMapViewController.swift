@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class WorldMapViewController: UIViewController {
-
+    
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,10 @@ class WorldMapViewController: UIViewController {
     func loadCoordinatesFromDatabaseToMapView() {
         let coordinates = DatabaseManager.selectCoordinates()
         print("Loading " + coordinates.count.description + " points to the map")
-        coordinates.forEach{ self.mapView.addAnnotation($0) }
+        coordinates.forEach {
+            if LifecycleController.displayCoordinatesWithoutCountry || !LifecycleController.displayCoordinatesWithoutCountry && $0.country != nil {
+                self.mapView.addAnnotation($0)
+            }
+        }
     }
 }

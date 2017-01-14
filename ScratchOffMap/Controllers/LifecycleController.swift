@@ -12,9 +12,23 @@ class LifecycleController {
 
     // MARK: - Variables
     static let coordinateCollector = try! CoordinateCollectorService(seconds: 5)
-//
-//    // MARK: - Initializers
-//    private init() {
-//        coordinateCollector = try! CoordinateCollectorService(days: 1)!
-//    }
+    static var displayCoordinatesWithoutCountry = true
+    
+    public static func attemptDecodingCountriesInDatabase() {
+        let coordinates = DatabaseManager.selectCoordinates()
+        
+        for point in coordinates {
+            if point.country == nil {
+                self.decodeAndStoreCountry(point: point)
+            }
+        }
+    }
+    
+    private static func decodeAndStoreCountry(point: Coordinates) {
+        GeoCoder().decodeCountry(ofPoint: point, completion: { (country) in
+            if let country = country {
+                DatabaseManager.insert(coordinates: point, country: country)
+            }
+        })
+    }
 }

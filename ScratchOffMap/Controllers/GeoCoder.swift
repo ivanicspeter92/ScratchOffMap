@@ -14,15 +14,15 @@ public protocol GeoCoderDelegate {
 
 class GeoCoder {
     // MARK: - Variables
-    static private let geoCoder = CLGeocoder()
+    private let geoCoder = CLGeocoder()
     
     // MARK: - Methods
-    static func decodeCountry(ofPoint: Coordinates, completion: @escaping ((Country?) -> Void)) {
+    func decodeCountry(ofPoint: Coordinates, completion: @escaping ((Country?) -> Void)) {
         let location = CLLocation(latitude: ofPoint.latitude, longitude: ofPoint.longitude)
         self.attemptDecoding(location: location, completion: completion)
     }
     
-    static private func attemptDecoding(location: CLLocation, completion: @escaping ((Country?) -> Void)) {
+    private func attemptDecoding(location: CLLocation, completion: @escaping ((Country?) -> Void)) {
         self.geoCoder.reverseGeocodeLocation(location) { (placemarks, error) -> Void in
             if let placeArray = placemarks as [CLPlacemark]! {
                 var placeMark: CLPlacemark!

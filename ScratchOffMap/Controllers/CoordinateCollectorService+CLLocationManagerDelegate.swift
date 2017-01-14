@@ -12,15 +12,7 @@ extension CoordinateCollectorService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         for location in locations {
             let coordinates = Coordinates(location: location)
-            
-            GeoCoder.decodeCountry(ofPoint: coordinates, completion: { (country) in
-                
-                if let country = country {
-                    DatabaseManager.insert(coordinates: coordinates, country: country)
-                } else if self.collectPointsWithoutCountry {
-                    DatabaseManager.insert(coordinates: coordinates)
-                }
-            })
+            DatabaseManager.insert(coordinates: coordinates)
         }
     }
     
