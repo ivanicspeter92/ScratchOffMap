@@ -10,10 +10,16 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
     // MARK: - Outlets
+    @IBOutlet weak var dutyCycilingIntervalLabel: UILabel!
     @IBOutlet weak var pointsOutsideCountriesSwitch: UISwitch!
     @IBOutlet weak var countriesWithoutCodeSwitch: UISwitch!
     
     // MARK: - Table view data source
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.loadDutyCyclingIntervalToUI()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -55,28 +61,39 @@ class SettingsTableViewController: UITableViewController {
     }
     
     // MARK: - Private functions
+    private func loadDutyCyclingIntervalToUI() {
+        self.dutyCycilingIntervalLabel.text = LifecycleController.coordinateCollector.intervalInSeconds.description + " seconds"
+    }
     
     private func displayDutyCyclingPicker() {
         let alert = UIAlertController(title: "Duty Cycling", message: nil, preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "30 seconds", style: .default, handler: { (UIAlertAction) in
+            self.setDutyCyclingInterval(minutes: 0.5)
+        }))
         alert.addAction(UIAlertAction(title: "5 minutes", style: .default, handler: { (UIAlertAction) in
-            
+            self.setDutyCyclingInterval(minutes: 5)
         }))
         alert.addAction(UIAlertAction(title: "15 minutes", style: .default, handler: { (UIAlertAction) in
-            
+            self.setDutyCyclingInterval(minutes: 15)
         }))
         alert.addAction(UIAlertAction(title: "30 minutes", style: .default, handler: { (UIAlertAction) in
-            
+            self.setDutyCyclingInterval(minutes: 30)
         }))
         alert.addAction(UIAlertAction(title: "1 hour", style: .default, handler: { (UIAlertAction) in
-            
+            self.setDutyCyclingInterval(minutes: 60)
         }))
-        alert.addAction(UIAlertAction(title: "Custom", style: .default, handler: { (UIAlertAction) in
-            
-        }))
+//        alert.addAction(UIAlertAction(title: "Custom", style: .default, handler: { (UIAlertAction) in
+//            
+//        }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func setDutyCyclingInterval(minutes: Double) {
+        LifecycleController.coordinateCollector.intervalInSeconds = minutes * 60
+        self.loadDutyCyclingIntervalToUI()
     }
     
     private func displayDeletePointsConfirmation() {

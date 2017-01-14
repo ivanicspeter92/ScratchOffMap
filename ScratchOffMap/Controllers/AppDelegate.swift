@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 //        self.insertTestPointsToDatabase()
-        LifecycleController.coordinateCollector?.start()
+        LifecycleController.coordinateCollector.start()
         
         return true
     }

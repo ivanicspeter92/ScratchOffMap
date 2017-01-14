@@ -226,6 +226,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="5L7-N8-Xea"/>
                     <connections>
                         <outlet property="countriesWithoutCodeSwitch" destination="jjb-X2-gpI" id="8wV-wJ-z7x"/>
+                        <outlet property="dutyCycilingIntervalLabel" destination="u2u-4U-PIz" id="D7S-t8-GnD"/>
                         <outlet property="pointsOutsideCountriesSwitch" destination="EbJ-1W-Fen" id="0PE-oH-dtG"/>
                     </connections>
                 </tableViewController>

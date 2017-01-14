@@ -11,7 +11,7 @@ import Foundation
 class LifecycleController {
     
     // MARK: - Variables
-    static let coordinateCollector = try! CoordinateCollectorService(seconds: 5)
+    static let coordinateCollector = try! CoordinateCollectorService(seconds: 5)!
     static var displayCoordinatesWithoutCountry = true
     static var showCountriesWithoutCode = true {
         didSet {
