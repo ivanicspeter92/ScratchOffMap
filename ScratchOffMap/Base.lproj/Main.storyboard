@@ -34,8 +34,15 @@
                             <constraint firstItem="Isb-fV-9RY" firstAttribute="top" secondItem="f5b-k5-bmk" secondAttribute="bottom" constant="8" id="l1f-G0-D8B"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="World map" id="Gvq-9K-2l7"/>
+                    <navigationItem key="navigationItem" title="World map" id="Gvq-9K-2l7">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="By5-26-06f">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="6cf-6p-4S5" id="ukN-BF-y5P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="By5-26-06f" id="jvk-5b-hMy"/>
                         <outlet property="mapView" destination="f5b-k5-bmk" id="KMK-8D-wm3"/>
                     </connections>
                 </viewController>

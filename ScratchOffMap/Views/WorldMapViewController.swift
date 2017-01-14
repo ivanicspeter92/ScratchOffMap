@@ -12,6 +12,7 @@ import MapKit
 class WorldMapViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var addButton: UIBarButtonItem!
     // MARK: - Event handlers
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,10 @@ class WorldMapViewController: UIViewController {
         if let coordinates = notification.object as? Coordinates {
             self.addCoordinatesToMapViewIfSettingsAllow(coordinates: coordinates)
         }
+    }
+    
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+        self.displayAddOptions()
     }
     
     // MARK: - Private functions
@@ -39,5 +44,22 @@ class WorldMapViewController: UIViewController {
         if LifecycleController.displayCoordinatesWithoutCountry || !LifecycleController.displayCoordinatesWithoutCountry && coordinates.country != nil {
             self.mapView.addAnnotation(coordinates)
         }
+    }
+    
+    private func displayAddOptions() {
+        let alert = UIAlertController(title: "Add...", message: nil, preferredStyle: .actionSheet)
+        alert.popoverPresentationController?.barButtonItem = self.addButton
+        
+        alert.addAction(UIAlertAction(title: "My current position", style: .default, handler: { (UIAlertAction) in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Coordinates manually", style: .default, handler: { (UIAlertAction) in
+            
+        }))
+        
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
