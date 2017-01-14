@@ -51,13 +51,25 @@ class WorldMapViewController: UIViewController {
         alert.popoverPresentationController?.barButtonItem = self.addButton
         
         alert.addAction(UIAlertAction(title: "My current position", style: .default, handler: { (UIAlertAction) in
-            
+            LifecycleController.coordinateCollector.performTask()
         }))
         alert.addAction(UIAlertAction(title: "Coordinates manually", style: .default, handler: { (UIAlertAction) in
-            
+            self.displayCoordinateInserterAlert()
         }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func displayCoordinateInserterAlert() {
+        let alert = UIAlertController(title: "Insert coordinates manually", message: nil, preferredStyle: .alert)
         
+        alert.addTextField(text: nil, placeholder: "lat,lon", editingChangedTarget: nil, editingChangedSelector: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            if let coordinateString = alert.textFields?[0].text, let coordinates = Coordinates(string: coordinateString) {
+                DatabaseManager.insert(coordinates: coordinates)
+            }
+        }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
