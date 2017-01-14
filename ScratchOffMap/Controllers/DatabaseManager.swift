@@ -17,6 +17,8 @@ class DatabaseManager {
                 
                 NSLog("Coordinates inserted: " + coordinates.description)
                 NSLog("Realm file: " + self.database.configuration.fileURL!.description)
+                
+                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: ScratchOffMapNotifications.coordinatesReceived.rawValue), object: coordinates))
             }
         } catch {
             self.database.cancelWrite()
@@ -31,6 +33,8 @@ class DatabaseManager {
                 
                 NSLog("Coordinates inserted: " + coordinates.description + "; country: " + country.description)
                 NSLog("Realm file: " + self.database.configuration.fileURL!.description)
+                
+                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: ScratchOffMapNotifications.coordinatesReceived.rawValue), object: coordinates))
             }
         } catch {
             self.database.cancelWrite()
