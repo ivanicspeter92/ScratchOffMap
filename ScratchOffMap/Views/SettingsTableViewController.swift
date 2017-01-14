@@ -9,7 +9,9 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-    @IBOutlet weak var counriesOutsideCountriesSwitch: UISwitch!
+    // MARK: - Outlets
+    @IBOutlet weak var pointsOutsideCountriesSwitch: UISwitch!
+    @IBOutlet weak var countriesWithoutCodeSwitch: UISwitch!
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -19,7 +21,7 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 3
+            return 4
         default:
             return 0
         }
@@ -28,15 +30,27 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             self.displayDutyCyclingPicker()
-        } else if indexPath.section == 0 && indexPath.row == 2 {
+        } else if indexPath.section == 0 && indexPath.row == 3 {
             self.displayDeletePointsConfirmation()
         }
     }
     
     // MARK: - Event handlers
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.pointsOutsideCountriesSwitch.isOn = LifecycleController.displayCoordinatesWithoutCountry
+        self.countriesWithoutCodeSwitch.isOn = LifecycleController.showCountriesWithoutCode
+    }
+    
     @IBAction func switchValueChanged(_ sender: UISwitch) {
-        if sender == self.counriesOutsideCountriesSwitch {
+        switch sender {
+        case self.pointsOutsideCountriesSwitch:
             LifecycleController.displayCoordinatesWithoutCountry = sender.isOn
+        case self.countriesWithoutCodeSwitch:
+            LifecycleController.showCountriesWithoutCode = sender.isOn
+        default:
+            break
         }
     }
     
