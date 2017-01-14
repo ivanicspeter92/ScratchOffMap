@@ -98,4 +98,16 @@ class DatabaseManagerTests: XCTestCase {
         let retrievedCountries = DatabaseManager.selectCountries()
         XCTAssertEqual(3, retrievedCountries.count)
     }
+    
+    func testSelectCountriesWithCode() {
+        DatabaseManager.deleteAllCountries()
+        let countries = [
+            Country(name: "Hungary"),
+            Country(name: "Moominland"),
+            Country(name: "Middle Earth")
+        ]
+        countries.forEach{ DatabaseManager.insert(country: $0) }
+        
+        XCTAssertEqual(1, DatabaseManager.selectCountriesWithCode().count)
+    }
 }

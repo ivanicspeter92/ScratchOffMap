@@ -16,7 +16,8 @@ class CountriesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.visitedCountries = DatabaseManager.selectCountries()
+        LifecycleController.countyListDelegate = self
+        self.loadVisitedCountriesFromDatabase()
     }
     
     // MARK: - Table view data source
@@ -52,5 +53,11 @@ class CountriesTableViewController: UITableViewController {
         }
         
         return super.tableView(tableView, cellForRowAt: indexPath)
+    }
+    
+    // MARK: - Methods
+    func loadVisitedCountriesFromDatabase() {
+        self.visitedCountries = LifecycleController.showCountriesWithoutCode ? DatabaseManager.selectCountries() : DatabaseManager.selectCountriesWithCode()
+        self.tableView.reloadData()
     }
 }

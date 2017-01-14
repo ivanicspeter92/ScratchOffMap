@@ -42,6 +42,8 @@
 		E5C3F2441E265E3B005D5621 /* LifecycleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3F2411E265E3B005D5621 /* LifecycleController.swift */; };
 		E5C3F2461E265E50005D5621 /* DatabaseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3F2451E265E50005D5621 /* DatabaseManagerTests.swift */; };
 		E5C3F2481E265FC8005D5621 /* RLMResults+ToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C3F2471E265FC8005D5621 /* RLMResults+ToArray.swift */; };
+		E5E1C7891E2A61B00096104B /* CountryListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1C7881E2A61B00096104B /* CountryListDelegate.swift */; };
+		E5E1C78B1E2A61FB0096104B /* CountriesTableViewController+CountryListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1C78A1E2A61FB0096104B /* CountriesTableViewController+CountryListDelegate.swift */; };
 		E5F4F2A91DF61DC200B23C83 /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = E5F4F2A81DF61DC200B23C83 /* Countries.json */; };
 		E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4F2AA1DF61E2D00B23C83 /* Country.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +112,8 @@
 		E5C3F2411E265E3B005D5621 /* LifecycleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifecycleController.swift; sourceTree = "<group>"; };
 		E5C3F2451E265E50005D5621 /* DatabaseManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManagerTests.swift; sourceTree = "<group>"; };
 		E5C3F2471E265FC8005D5621 /* RLMResults+ToArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLMResults+ToArray.swift"; sourceTree = "<group>"; };
+		E5E1C7881E2A61B00096104B /* CountryListDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListDelegate.swift; sourceTree = "<group>"; };
+		E5E1C78A1E2A61FB0096104B /* CountriesTableViewController+CountryListDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CountriesTableViewController+CountryListDelegate.swift"; sourceTree = "<group>"; };
 		E5F4F2A81DF61DC200B23C83 /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
 		E5F4F2AA1DF61E2D00B23C83 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +196,7 @@
 		E51E62291DF61100004621B7 /* ScratchOffMap */ = {
 			isa = PBXGroup;
 			children = (
+				E5E1C7871E2A618F0096104B /* Protocols */,
 				E5F4F2A61DF61A2B00B23C83 /* Controllers */,
 				E5C1A6E51E24087100E934D8 /* Extensions */,
 				E5F4F2A41DF61A1B00B23C83 /* Models */,
@@ -265,6 +270,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E5E1C7871E2A618F0096104B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E5E1C7881E2A61B00096104B /* CountryListDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		E5F4F2A41DF61A1B00B23C83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +295,7 @@
 				E5C1A6EA1E240A8000E934D8 /* WorldMapViewController.swift */,
 				E5C1A6EC1E240AD600E934D8 /* SettingsTableViewController.swift */,
 				E506C3461E292FAB00CC4286 /* CountriesTableViewController.swift */,
+				E5E1C78A1E2A61FB0096104B /* CountriesTableViewController+CountryListDelegate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -603,7 +617,9 @@
 				E5C1A6E41E24084300E934D8 /* Coordinates.swift in Sources */,
 				E523D4141E29784400C42677 /* String+Image.swift in Sources */,
 				E5C1A6E71E24087F00E934D8 /* String+ToDouble.swift in Sources */,
+				E5E1C7891E2A61B00096104B /* CountryListDelegate.swift in Sources */,
 				E5F4F2AB1DF61E2D00B23C83 /* Country.swift in Sources */,
+				E5E1C78B1E2A61FB0096104B /* CountriesTableViewController+CountryListDelegate.swift in Sources */,
 				E5917E891E24BAFD008CA8D4 /* DutyCycling.swift in Sources */,
 				E5C3F2441E265E3B005D5621 /* LifecycleController.swift in Sources */,
 				E523D4191E297EEE00C42677 /* CoordinateCollectorService+CLLocationManagerDelegate.swift in Sources */,
