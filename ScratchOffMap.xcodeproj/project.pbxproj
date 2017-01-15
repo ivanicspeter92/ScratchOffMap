@@ -30,7 +30,6 @@
 		E5917E931E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E921E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift */; };
 		E5917E951E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5917E941E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift */; };
 		E5B0DED41E26B0660057F42D /* CoordinatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0DED31E26B0660057F42D /* CoordinatesTests.swift */; };
-		E5B0DED71E26B5A40057F42D /* CoordinateCollectorServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B0DED61E26B5A40057F42D /* CoordinateCollectorServiceTests.swift */; };
 		E5B21C8D1E2A898000471DB4 /* ScratchOffMapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B21C8C1E2A898000471DB4 /* ScratchOffMapNotifications.swift */; };
 		E5C1A6E41E24084300E934D8 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6E31E24084300E934D8 /* Coordinates.swift */; };
 		E5C1A6E71E24087F00E934D8 /* String+ToDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */; };
@@ -101,7 +100,6 @@
 		E5917E921E24D942008CA8D4 /* NSLocale+LocaleCodeForCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+LocaleCodeForCountry.swift"; sourceTree = "<group>"; };
 		E5917E941E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+LocaleCodeForCountryTests.swift"; sourceTree = "<group>"; };
 		E5B0DED31E26B0660057F42D /* CoordinatesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatesTests.swift; sourceTree = "<group>"; };
-		E5B0DED61E26B5A40057F42D /* CoordinateCollectorServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateCollectorServiceTests.swift; sourceTree = "<group>"; };
 		E5B21C8C1E2A898000471DB4 /* ScratchOffMapNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchOffMapNotifications.swift; sourceTree = "<group>"; };
 		E5C1A6E31E24084300E934D8 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		E5C1A6E61E24087E00E934D8 /* String+ToDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ToDouble.swift"; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 				E5C3F2451E265E50005D5621 /* DatabaseManagerTests.swift */,
 				E5C1A6F11E24127E00E934D8 /* DutyCyclingTests.swift */,
 				E5917E8F1E24BEFF008CA8D4 /* GeoCoderTests.swift */,
-				E5B0DED61E26B5A40057F42D /* CoordinateCollectorServiceTests.swift */,
 				E56EAAB91E28CF46005C3D10 /* TestCoordinates.swift */,
 			);
 			path = Controllers;
@@ -652,7 +649,6 @@
 				E56EAABA1E28CF46005C3D10 /* TestCoordinates.swift in Sources */,
 				E5917E951E24D969008CA8D4 /* NSLocale+LocaleCodeForCountryTests.swift in Sources */,
 				E5C1A6F21E24127E00E934D8 /* DutyCyclingTests.swift in Sources */,
-				E5B0DED71E26B5A40057F42D /* CoordinateCollectorServiceTests.swift in Sources */,
 				E5C3F2461E265E50005D5621 /* DatabaseManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
