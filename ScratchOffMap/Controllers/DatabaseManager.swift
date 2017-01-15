@@ -68,9 +68,10 @@ class DatabaseManager {
     static func insert(country: Country) {
         do {
             try self.database.write {
-                self.database.add(country, update: true)
+                let countryToDatabase = self.selectCountry(withName: country.name) ?? country
+                self.database.add(countryToDatabase)
                 
-                NSLog("Country inserted: " + country.description)
+                NSLog("Country inserted: " + countryToDatabase.description)
             }
         } catch {
             self.database.cancelWrite()

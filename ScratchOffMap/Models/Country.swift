@@ -35,8 +35,4 @@ public class Country: Object {
         self.name = name
         self.code = NSLocale.localeCode(forCountry: name)
     }
-    
-    override public class func primaryKey() -> String {
-        return "code"
-    }
 }
