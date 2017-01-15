@@ -17,4 +17,10 @@ class CoordinatesTests: XCTestCase {
         
         XCTAssertTrue(first.timestamp < second.timestamp)
     }
+    
+    func testInitFromString() {
+        let coordinates = Coordinates(string: "-140.11963,28.55943")
+        XCTAssertEqual(-140.11963, coordinates?.longitude)
+        XCTAssertEqual(28.55943, coordinates?.latitude)
+    }
 }
