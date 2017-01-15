@@ -13,7 +13,7 @@ class LifecycleController {
     // MARK: - Variables
     static let coordinateCollector = try! CoordinateCollectorService(seconds: 5)!
     static var displayCoordinatesWithoutCountry = true
-    static var showCountriesWithoutCode = true {
+    static var showCountriesWithoutCode = false {
         didSet {
             if showCountriesWithoutCode != oldValue {
                 self.countyListDelegate?.showCountriesWithoutCodeChanged()
