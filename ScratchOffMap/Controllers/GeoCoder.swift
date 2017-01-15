@@ -8,10 +8,6 @@
 
 import MapKit
 
-public protocol GeoCoderDelegate {
-    func retrieved(country: Country)
-}
-
 class GeoCoder {
     // MARK: - Variables
     private let geoCoder = CLGeocoder()
