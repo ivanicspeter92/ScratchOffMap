@@ -23,12 +23,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5b-k5-bmk">
-                                <rect key="frame" x="16" y="72" width="343" height="538"/>
+                                <rect key="frame" x="16" y="107" width="343" height="503"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fvd-4f-MRn">
+                                <rect key="frame" x="16" y="71" width="343" height="29"/>
+                                <segments>
+                                    <segment title="All world"/>
+                                    <segment title="Europe"/>
+                                    <segment title="Africa"/>
+                                    <segment title="Asia"/>
+                                    <segment title="Australia"/>
+                                    <segment title="Americas"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="f5b-k5-bmk" firstAttribute="top" secondItem="5Pg-Ej-5n3" secondAttribute="bottom" constant="8" id="1Jr-WH-aNv"/>
+                            <constraint firstItem="f5b-k5-bmk" firstAttribute="top" secondItem="Fvd-4f-MRn" secondAttribute="bottom" constant="8" id="0d2-Jf-SIm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Fvd-4f-MRn" secondAttribute="leading" id="1Gc-kW-vYf"/>
+                            <constraint firstItem="Fvd-4f-MRn" firstAttribute="top" secondItem="5Pg-Ej-5n3" secondAttribute="bottom" constant="7" id="I4x-cp-8mP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fvd-4f-MRn" secondAttribute="trailing" id="Urx-ew-4xt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="f5b-k5-bmk" secondAttribute="leading" id="XUO-BE-6Bk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f5b-k5-bmk" secondAttribute="trailing" id="e9Z-Sf-MK8"/>
                             <constraint firstItem="Isb-fV-9RY" firstAttribute="top" secondItem="f5b-k5-bmk" secondAttribute="bottom" constant="8" id="l1f-G0-D8B"/>
